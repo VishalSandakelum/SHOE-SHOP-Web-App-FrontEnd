@@ -63,6 +63,8 @@ header{
     width: 250px;
 }
 
+/*Dash Board Left Side*/
+
 .leftside{
     position: absolute;
     top: 0%;
@@ -72,6 +74,26 @@ header{
     background-color: green;
 }
 
+.mylogo>img{
+    width: 80px;
+}
+
+.mylogo>h5{
+    font-family: "Concert One", cursive;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.leftsidemaindiv{
+    height: 90vh;
+}
+
+.menubuttoncontainer>button>img{
+    width: 30px;
+}
+
+/*Dash Board Right Side*/
 .rightside{
     position: absolute;
     right: 0%;
