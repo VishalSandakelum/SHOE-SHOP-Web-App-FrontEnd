@@ -1,0 +1,82 @@
+header{
+    position: absolute;
+    right: 0%;
+    width: 80vw;
+    height: 10vh;
+    background-color: red;
+}
+
+.searchicon{
+    color: gray;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.searchside{
+    width: 150px;
+}
+
+.profilepictures>img{
+    width: 40px;
+}
+
+.notification>img{
+    width: 25px;
+}
+
+.taptosearch{
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: small;
+    margin-top: 3px;
+    color: black;
+    cursor: pointer;
+}
+
+.profilepictures{
+    width: 200px;
+    height: 40px;
+}
+
+.profiledetails{
+    height: 35px;
+    width: 150px;
+}
+
+.profiledetails>h5:nth-child(1){
+    font-family: "Dongle", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 0.5;
+}
+
+.profiledetails>h5:nth-child(2){
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: small;
+}
+
+.headerightside{
+    width: 250px;
+}
+
+.leftside{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 20vw;
+    height: 100vh;
+    background-color: green;
+}
+
+.rightside{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    width: 80vw;
+    height: 90vh;
+    background-color: blue;
+}
