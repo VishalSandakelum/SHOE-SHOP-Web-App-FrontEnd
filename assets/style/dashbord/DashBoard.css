@@ -89,8 +89,38 @@ header{
     height: 90vh;
 }
 
-.menubuttoncontainer>button>img{
-    width: 30px;
+.menubuttoncontainer>button>i{
+    width: 25px;
+    height: 20px;
+}
+
+.menubuttoncontainer>button{
+    font-family: "Dongle", cursive;
+    font-size: 23px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.menubuttoncontainer>button:hover{
+    background-color: rgb(15, 83, 255);
+    color: white;
+}
+
+.menubuttoncontainer>button>i{
+    margin-right: 20px;
+}
+
+.menubuttoncontainer>button>div{
+    width: 40px;
+    margin-right: 50px;
+}
+
+.homebutton{
+    margin-top: 60px;
+}
+
+.menubuttoncontainer>button:last-child{
+    margin-top: 150px;
 }
 
 /*Dash Board Right Side*/
