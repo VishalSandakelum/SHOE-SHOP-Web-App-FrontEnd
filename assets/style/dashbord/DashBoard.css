@@ -132,3 +132,118 @@ header{
     height: 90vh;
     background-color: blue;
 }
+
+.rightsidemaincontainer{
+    height: 100%;
+}
+
+.managedetails{
+    width: 95%;
+    height: 20%;
+    border-radius: 13px;
+}
+
+.managedetails>div{
+    height: 80%;
+    border-right: 2px solid white;
+}
+
+.managedetails>div:last-child{
+    border-right: 0px;
+}
+
+.managedetails>div>div{
+    margin-top: 10px;
+}
+
+.managedetails>div>div>img{
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.managedetails>div>div>h5{
+    font-family: "Dongle", cursive;
+    font-size: 30px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+    margin-left: 20px;
+    height: 20px;
+}
+
+.revenuedetails>div{
+    height: 40px;
+    background-color: white;
+    margin-left: 90px;
+}
+
+.revenuedetails>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 45px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+}
+
+.revenuedetails>div:nth-child(1)>h4:nth-child(1){
+    color: #8a8a8a;
+}
+
+.revenuedetails>div:nth-child(1)>h4:nth-child(2){
+    margin-left: 6px;
+}
+
+.revenuedetails>div:nth-child(2)>i:nth-child(2){
+    display: none;
+}
+
+.revenuedetails>div:nth-child(2){
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.employeedetails>div , .supplierdetails>div , .loyalatydetails>div{
+    width: fit-content;
+    background-color: white;
+    height: 40px;
+    margin-left: 90px;
+}
+
+.employeedetails>div:nth-child(1)>h4 , .supplierdetails>div:nth-child(1)>h4 , .loyalatydetails>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 45px;
+    font-weight: 550;
+    color: rgb(52, 52, 52);
+}
+
+.employeedetails>div:nth-child(2)>i:last-child , .supplierdetails>div:nth-child(2)>i:last-child {
+    display: none;
+}
+
+.loyalatydetails>div:nth-child(2)>i:nth-child(2){
+    display: none;
+}
+
+.employeedetails>div:nth-child(2)>h4 , .supplierdetails>div:nth-child(2)>h4 , .loyalatydetails>div:nth-child(2)>h4{
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.employeedetails>div:nth-child(2) , .supplierdetails>div:nth-child(2) , .loyalatydetails>div:nth-child(2){
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.loyalatydetails>div:nth-child(2){
+    color: rgb(166, 0, 11);
+    background-color: rgba(254, 65, 93, 0.208);
+}
