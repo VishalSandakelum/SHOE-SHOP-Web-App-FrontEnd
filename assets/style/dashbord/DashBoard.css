@@ -247,3 +247,69 @@ header{
     color: rgb(166, 0, 11);
     background-color: rgba(254, 65, 93, 0.208);
 }
+
+.chartanddetailscontainer{
+    width: 95%;
+    height: 50%;
+    margin-top: 20px;
+}
+
+.chartanddetailscontainer>div:nth-child(2){
+    width: 30%;
+}
+
+.chartanddetailscontainer>div{
+    border-radius: 13px;
+}
+
+/**/
+.mostsaleshoedetails{
+    position: relative;
+}
+
+.mostsaleshoedetails>img{
+    width: 100%;
+    height: 100%;
+}
+
+.mostsaleshoedetails>div>img:nth-child(2){
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    width: 300px;
+    height: 230px;
+}
+
+.mostsaleshoedetails>div>img:nth-child(1){
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100px;
+    height: 80px;
+}
+
+/**/
+
+.employeeandsupplierdetailscontainer{
+    width: 95%;
+    height: 23%;
+    margin-top: 20px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.employeeandsupplierdetailscontainer>div{
+    border-radius: 13px;
+    overflow: scroll;
+}
+
+.employeeandsupplierdetailscontainer>div:nth-child(2){
+    margin-left: 40px;
+    width: 63%;
+    background-color: white;
+}
+
+.employeeandsupplierdetailscontainer>div>div{
+    
+}
