@@ -263,16 +263,51 @@ header{
 }
 
 /**/
-.mostsaleshoedetails{
-    position: relative;
+
+.chart{
+    background-color: white;
 }
 
-.mostsaleshoedetails>img{
+.chart>div{
+    margin-top: 20px;
+    height: 80%;
+}
+
+.chart>div>h4{
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 40px;
+    font-weight: 550;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1)>h4:nth-child(1){
+    margin-right: 7px;
+    color: #8a8a8a;
+}
+
+.chart>div>div:nth-child(2)>div:nth-child(1){
+    position: relative;
+    bottom: 10px;
+}
+
+/**/
+.mostsaleshoedetails{
+    position: relative;
+    overflow: hidden;
+}
+
+.mostsaleshoedetails>div>img{
     width: 100%;
     height: 100%;
 }
 
-.mostsaleshoedetails>div>img:nth-child(2){
+.mostsaleshoedetails>div>div>img:nth-child(2){
     position: absolute;
     top: 0%;
     bottom: 0%;
@@ -281,12 +316,40 @@ header{
     height: 230px;
 }
 
-.mostsaleshoedetails>div>img:nth-child(1){
+.mostsaleshoedetails>div>div>img:nth-child(1){
     position: absolute;
     top: 5%;
     left: 5%;
     width: 100px;
     height: 80px;
+}
+
+.shoedetails>div{
+    margin-top: 20px;
+    height: 310px;
+    display: none;
+    overflow: scroll;
+}
+
+.shoedetails>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.shoedetails>div>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.shoedetails>div>table:nth-child(2)>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.shoedetails>div>table:nth-child(2)>tbody>tr>th, .shoedetails>div>table:nth-child(2)>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
 }
 
 /**/
