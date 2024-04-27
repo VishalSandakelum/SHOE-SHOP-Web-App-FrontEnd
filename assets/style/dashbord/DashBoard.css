@@ -1,3 +1,24 @@
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+  }
+
 header{
     position: absolute;
     right: 0%;
@@ -312,6 +333,8 @@ header{
     position: absolute;
     top: 0%;
     bottom: 0%;
+    left: 0%;
+    right: 0%;
     margin: auto;
     width: 300px;
     height: 230px;
@@ -330,6 +353,7 @@ header{
     height: 310px;
     display: none;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .shoedetails>div>div:nth-child(1){
@@ -360,11 +384,13 @@ header{
     height: 23%;
     margin-top: 20px;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 .employeeandsupplierdetailscontainer>div{
     border-radius: 13px;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .employeeandsupplierdetailscontainer>div:nth-child(2){
