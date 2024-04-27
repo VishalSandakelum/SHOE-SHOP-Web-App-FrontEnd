@@ -313,3 +313,111 @@ header{
 .employeeandsupplierdetailscontainer>div>div{
     
 }
+
+/**/
+.birthdaydetailscontainer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.birthdaydetailscontainer>h4:nth-child(1){
+    margin-bottom: 20px;
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.employeecontainer>div>div>div:nth-child(1){
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.employeecontainer>div>div>div:nth-child(1)>img{
+    width: inherit;
+    height: inherit;
+}
+
+.spaceline{
+    height: 60px;
+    border-left: 2px solid white;
+    margin-left: 17px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.daytoday{
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-top: 10px;
+}
+
+.daytoday>h4{
+    font-family: "Dongle", cursive;
+    font-size: 20px;
+    font-weight: 550;
+    height: 10px;
+}
+
+.birthdaydetails>h4:nth-child(1){
+    font-family: "Dongle", cursive;
+    font-size: 30px;
+    font-weight: 550;
+    height: 17px;
+}
+
+.birthdaydetails>h4:nth-child(2){
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    font-weight: 550;
+    color: rgb(53, 53, 53);
+}
+
+.birthdaydetails{
+    margin-left: 10px;
+}
+
+.tablecontainer{
+    margin-top: 35px;
+}
+
+.tableheader{
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.tableheader>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.tablecontainer>table>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.tablecontainer>table>tbody>tr>th , .tablecontainer>table>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 25px;
+}
+
+.status>div{
+    width: 50px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+}
+
+.status>div>h4{
+    font-family: "Dongle", cursive;
+    font-size: 18px;
+    font-weight: 550;
+    height: 10px;
+}
