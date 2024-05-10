@@ -1,0 +1,168 @@
+main{
+    position: relative;
+    height: 100vh;
+    background-color: #f6f9fe;
+}
+
+main>div{
+    height: 60%;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.389);
+}
+
+.logintitle{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.logintitle>img{
+    width: 30px;
+}
+
+.logintitle>h4{
+    font-family: "Concert One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #545252;
+}
+
+.formconatainer{
+    position: relative;
+    height: 400px;
+    margin-top: 8px;
+}
+
+.signincontainer{
+    position: relative;
+    height: 465px;
+}
+
+.signinheader{
+    height: 50px;
+}
+
+.signinheader>h2{
+    font-family: "Dongle", cursive;
+    font-size: 45px;
+    font-weight: 950;
+    color: #545252;
+}
+
+.socialbtncontainer{
+    position: relative;
+    height: 40px;
+    bottom: 12px;
+}
+
+.socialbtncontainer>button{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 100%;
+    border: 1px solid rgb(152, 152, 152);
+    background-color: transparent;
+}
+
+.socialbtncontainer>button>i{
+    color: #545252;
+}
+
+.optiontitle{
+    height: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+.optiontitle>h4{
+    font-family: "Dongle", cursive;
+    font-size: 23px;
+    font-weight: 550;
+    color: #5c5c5c;
+}
+
+.signininputcontainer>div{
+    margin-bottom: 15px;
+}
+
+.signininputcontainer{
+    position: relative;
+    height: fit-content;
+    bottom: 20px;
+}
+
+.rolecontainer{
+    display: none;
+}
+
+.inputfont{
+    font-family: "Dongle", cursive;
+    font-size: 23px !important;
+}
+
+.bottomcontainer{
+    height: 85px;
+    position: relative;
+    bottom: 15px;
+}
+
+.bottomcontainer>h3{
+    height: fit-content;
+    font-family: "Dongle", cursive;
+    font-size: 27px;
+}
+
+.bottomcontainer>div>button{
+    width: 110px;
+    height: 40px;
+    border-radius: 40px;
+    border: 0px;
+    background-color: rgb(15, 83, 255);
+    color: white;
+    font-family: "Dongle", cursive;
+    font-size: 23px;
+}
+
+.signupside{
+    background-color: white;
+}
+
+.signupoptioncontainer>div{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signupoptioncontainer>div:nth-child(3)>button{
+    margin-top: 20px;
+    width: 110px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.195);
+    color: white;
+    font-family: "Dongle", cursive;
+    font-size: 23px;
+}
+
+.signupoptioncontainer>div:nth-child(3)>button:hover{
+    background-color: white;
+    color: black;
+}
+
+.signupoptioncontainer>div>h1{
+    font-family: "Concert One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 35px;
+    color: white;
+}
+
+.signupoptioncontainer>div>h5{
+    font-family: "Dongle", cursive;
+    font-size: 30px;
+    color: white;
+}
+
+.signupoptionmaincontainer{
+    background-color: rgb(15, 83, 255);
+}

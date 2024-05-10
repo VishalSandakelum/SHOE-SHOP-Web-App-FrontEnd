@@ -167,7 +167,7 @@ header{
 
 .managedetails>div{
     height: 80%;
-    border-right: 2px solid rgb(157, 157, 157);
+    border-right: 1px solid rgb(157, 157, 157);
 }
 
 .managedetails>div:last-child{
