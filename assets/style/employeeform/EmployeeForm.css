@@ -39,6 +39,7 @@
 .employeedetailsmaincontainer{
     position: relative;
     width: 97%;
+    height: 1370px;
     margin-bottom: 200px;
 }
 
@@ -107,4 +108,41 @@
     font-family: "Dongle", cursive;
     font-size: 25px !important;
     height: 25px;
+  }
+
+  .employeedetailssecondcontainer,.employeedetailsthirdcontainer{
+    height: 250px;
+  }
+
+  .employeedetailssecondcontainer>div,.employeedetailsthirdcontainer>div{
+    position: relative;
+    height: 100%;
+    border: 2px solid red;
+    width: calc(95%/3);
+  }
+
+  .employeedetailsforthcontainer{
+    height: 70px;
+  }
+
+  .employeedetailsfifthcontainer{
+    height: 350px;
+  }
+
+  .employeedetailsforthcontainer>button{
+    height: 40px;
+    width: 120px;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    line-height: 20px;
+  }
+
+  .employeedetailsforthcontainer>button:hover{
+    color: white;
+  }
+
+  .employeedetailsfifthcontainer{
+    overflow: scroll;
+    border: 1px solid #757474;
+    border-radius: 15px;
   }
