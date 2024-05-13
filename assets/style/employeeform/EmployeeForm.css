@@ -146,3 +146,32 @@
     border: 1px solid #757474;
     border-radius: 15px;
   }
+
+  /*-----------------------------*/
+
+  .employeedetailsfifthcontainer>div{
+    margin-top: 20px;
+    height: 310px;
+    overflow: scroll;
+   }
+
+.employeedetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.employeedetailsfifthcontainer>div>div:nth-child(1)>h4{
+    font-family: "Dongle", cursive;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
+    font-size: 21px;
+    font-family: "Dongle", sans-serif;
+    color: #8a8a8a;
+}
+
+.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th, .employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
+}
