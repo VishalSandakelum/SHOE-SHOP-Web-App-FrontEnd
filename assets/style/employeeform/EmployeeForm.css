@@ -1,10 +1,10 @@
 /*-------------------------------Employee Form----------------------------------*/
 
-.employeeformmaincontainer,.inventoryformmaincontainer{
+.employeeformmaincontainer,.inventoryformmaincontainer,.supplierformmaincontainer{
     height: 90vh;
 }
 
-.employeeformmaincontainer>div,.inventoryformmaincontainer>div{
+.employeeformmaincontainer>div,.inventoryformmaincontainer>div,.supplierformmaincontainer>div{
     position: relative;
     height: 97%;
     width: 97%;
@@ -14,13 +14,13 @@
     background-color: transparent;
 }
 
-.emplyoeeformtitle,.inventoryformtitle{
+.emplyoeeformtitle,.inventoryformtitle,.supplierformtitle{
     position: relative;
     height: 50px;
     width: 97%;
 }
 
-.emplyoeeformtitle>h2,.inventoryformtitle>h2{
+.emplyoeeformtitle>h2,.inventoryformtitle>h2,.supplierformtitle>h2{
     font-family: "Concert One", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -30,7 +30,7 @@
     margin-left: 15px;
 }
 
-.emplyoeeformtitle>div,.inventoryformtitle>div{
+.emplyoeeformtitle>div,.inventoryformtitle>div,.supplierformtitle>div{
     border-radius: 100%;
     border-bottom: 1px solid #5c5c5c;
 }
@@ -71,7 +71,7 @@
     width: 60px;
   }
 
-  .employeedetailsfirstcontainer>div,.inventorydetailsfirstcontainer>div{
+  .employeedetailsfirstcontainer>div,.inventorydetailsfirstcontainer>div,.supplierdetailsfirstcontainer>div{
     position: relative;
     height: 100%;
     width: calc(95%/3);
@@ -112,7 +112,7 @@
     height: 250px;
   }
 
-  .employeedetailssecondcontainer>div,.employeedetailsthirdcontainer>div{
+  .employeedetailssecondcontainer>div,.employeedetailsthirdcontainer>div,.supplierdetailssecondcontainer>div,.supplierdetailsthirdcontainer>div{
     position: relative;
     height: 100%;
     width: calc(95%/3);
@@ -138,7 +138,7 @@
     color: white;
   }
 
-  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer{
+  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer,.supplierdetailsfifthcontainer{
     overflow: scroll;
     border: 1px solid #757474;
     border-radius: 15px;
@@ -147,7 +147,7 @@
 
   /*-----------------------------*/
 
-  .employeedetailsfifthcontainer>div,.inventorydetailsfifthcontainer>div{
+  .employeedetailsfifthcontainer>div,.inventorydetailsfifthcontainer>div,.supplierdetailsfifthcontainer>div{
     margin-top: 20px;
     height: 310px;
     overflow: scroll;
@@ -159,19 +159,26 @@
     width: 1580px;
 }
 
-.employeedetailsfifthcontainer>div>div:nth-child(1)>h4,.inventorydetailsfifthcontainer>div>div:nth-child(1)>h4{
+.employeedetailsfifthcontainer>div>div:nth-child(1)>h4,
+.inventorydetailsfifthcontainer>div>div:nth-child(1)>h4,
+.supplierdetailsfifthcontainer>div>div:nth-child(1)>h4{
     font-family: "Dongle", cursive;
     font-size: 35px;
     font-weight: 550;
 }
 
-.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,.inventorydetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
+.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.inventorydetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
     font-size: 21px;
     font-family: "Dongle", sans-serif;
     color: #8a8a8a;
 }
 
-.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th, .employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td{
+.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.employeedetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th,
+.supplierdetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td{
     font-family: "Dongle", sans-serif;
     font-size: 23px;
 }

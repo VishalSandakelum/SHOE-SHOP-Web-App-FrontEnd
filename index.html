@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/style/dashbord/DashBoard.css">
     <link rel="stylesheet" href="assets/style/employeeform/EmployeeForm.css">
     <link rel="stylesheet" href="assets/style/inventoryform/InventoryForm.css">
+    <link rel="stylesheet" href="assets/style/supplierform/SupplierForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -548,7 +549,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center inventoryformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center inventoryformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="inventoryformtitle">
                         <h2>Add Inventory</h2>
@@ -691,6 +692,155 @@
                                                 <h4>Available</h4>
                                             </div>
                                         </td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center supplierformmaincontainer">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="supplierformtitle">
+                        <h2>Add Supplier</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between supplierdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Name</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Category</option>
+                                        <option class="selectedfont" value="1">LOCAL</option>
+                                        <option class="selectedfont" value="2">INTERNATIONAL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailssecondcontainer">
+                            <div class="secondtcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                </div>
+                            </div>
+                            <div class="secondtcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                </div>
+                            </div>
+                            <div class="secondtcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Country</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between supplierdetailsthirdcontainer">
+                            <div class="thirdcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                </div>
+                            </div>
+                            <div class="thirdcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Land Line Number</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Land Line Number">
+                                </div>
+                            </div>
+                            <div class="thirdcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between inventorydetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Update</button>
+                            <button type="button" class="btn btn-outline-success">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Get</button>
+                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center supplierdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Supplier Details</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Building_No</th>
+                                        <th scope="col">Lane</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Postal_Code</th>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Contact_Number</th>
+                                        <th scope="col">Land_Line_Number</th>
+                                        <th scope="col">Email</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SP001</th>
+                                        <td>Theekshana</td>
+                                        <td>LOCAL</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>80042 Galle</td>
+                                        <td>Sri-Lanka</td>
+                                        <td>0762656420</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SP002</th>
+                                        <td>Theekshana</td>
+                                        <td>LOCAL</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>80042 Galle</td>
+                                        <td>Sri-Lanka</td>
+                                        <td>0762656420</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
                                       </tr>
                                       
                                     </tbody>
