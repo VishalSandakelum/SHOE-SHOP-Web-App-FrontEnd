@@ -1,26 +1,26 @@
 /*-------------------------------Employee Form----------------------------------*/
 
-.employeeformmaincontainer{
+.employeeformmaincontainer,.inventoryformmaincontainer{
     height: 90vh;
 }
 
-.employeeformmaincontainer>div{
+.employeeformmaincontainer>div,.inventoryformmaincontainer>div{
     position: relative;
     height: 97%;
     width: 97%;
     border-radius: 15px;
     overflow: scroll;
-    border: 1px solid #818080;
-    background-color: white;
+    border: 1px solid #c7c7c7;
+    background-color: transparent;
 }
 
-.emplyoeeformtitle{
+.emplyoeeformtitle,.inventoryformtitle{
     position: relative;
     height: 50px;
     width: 97%;
 }
 
-.emplyoeeformtitle>h2{
+.emplyoeeformtitle>h2,.inventoryformtitle>h2{
     font-family: "Concert One", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -30,7 +30,7 @@
     margin-left: 15px;
 }
 
-.emplyoeeformtitle>div{
+.emplyoeeformtitle>div,.inventoryformtitle>div{
     border-radius: 100%;
     border-bottom: 1px solid #5c5c5c;
 }
@@ -118,15 +118,15 @@
     width: calc(95%/3);
   }
 
-  .employeedetailsforthcontainer{
+  .employeedetailsforthcontainer,.inventorydetailsforthcontainer{
     height: 70px;
   }
 
-  .employeedetailsfifthcontainer{
+  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer{
     height: 350px;
   }
 
-  .employeedetailsforthcontainer>button{
+  .employeedetailsforthcontainer>button,.inventorydetailsforthcontainer>button{
     height: 40px;
     width: 120px;
     font-family: "Dongle", cursive;
@@ -134,11 +134,11 @@
     line-height: 20px;
   }
 
-  .employeedetailsforthcontainer>button:hover{
+  .employeedetailsforthcontainer>button:hover,.inventorydetailsforthcontainer>button:hover{
     color: white;
   }
 
-  .employeedetailsfifthcontainer{
+  .employeedetailsfifthcontainer,.inventorydetailsfifthcontainer{
     overflow: scroll;
     border: 1px solid #757474;
     border-radius: 15px;
@@ -147,7 +147,7 @@
 
   /*-----------------------------*/
 
-  .employeedetailsfifthcontainer>div{
+  .employeedetailsfifthcontainer>div,.inventorydetailsfifthcontainer>div{
     margin-top: 20px;
     height: 310px;
     overflow: scroll;
@@ -159,13 +159,13 @@
     width: 1580px;
 }
 
-.employeedetailsfifthcontainer>div>div:nth-child(1)>h4{
+.employeedetailsfifthcontainer>div>div:nth-child(1)>h4,.inventorydetailsfifthcontainer>div>div:nth-child(1)>h4{
     font-family: "Dongle", cursive;
     font-size: 35px;
     font-weight: 550;
 }
 
-.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
+.employeedetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th,.inventorydetailsfifthcontainer>div>table:nth-child(2)>thead>tr>th{
     font-size: 21px;
     font-family: "Dongle", sans-serif;
     color: #8a8a8a;

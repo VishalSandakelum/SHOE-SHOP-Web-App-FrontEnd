@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/framework/css/bootstrap.css">
     <link rel="stylesheet" href="assets/style/dashbord/DashBoard.css">
     <link rel="stylesheet" href="assets/style/employeeform/EmployeeForm.css">
+    <link rel="stylesheet" href="assets/style/inventoryform/InventoryForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -346,7 +347,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center employeeformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center employeeformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="emplyoeeformtitle">
                         <h2>Add Employee</h2>
@@ -538,6 +539,158 @@
                                         <td>Theekshana29@gmailcom</td>
                                         <td>Kasun</td>
                                         <td>0762656420</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center inventoryformmaincontainer">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="inventoryformtitle">
+                        <h2>Add Inventory</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between inventorydetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between inventorydetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div id="image-preview">
+                                    <img src="" alt="">
+                                    <img src="assets/img/EmployeeForm/imageupload.png" alt="">
+                                </div>
+                                <input type="file" id="file-input" accept="image/*">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Buy Price</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Sale Price</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Profit Margin</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Profit Margin">
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Description</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Category</option>
+                                        <option class="selectedfont" value="1">MALE</option>
+                                        <option class="selectedfont" value="2">FEMALE</option>
+                                        <option class="selectedfont" value="3">OTHER</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Quantity</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Quantity">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Status</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Status</option>
+                                        <option class="selectedfont" value="1">AVAILABLE</option>
+                                        <option class="selectedfont" value="2">LOW</option>
+                                        <option class="selectedfont" value="3">NOT AVAILABLE</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Size">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Code</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Supplier Code">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Name</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Supplier Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Expected Profit</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Expected Profit">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between inventorydetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Update</button>
+                            <button type="button" class="btn btn-outline-success">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Get</button>
+                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center inventorydetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Inventory Details</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Supplier_Code</th>
+                                        <th scope="col">Supplier_Name</th>
+                                        <th scope="col">Sale(LKR)</th>
+                                        <th scope="col">Buy(LKR)</th>
+                                        <th scope="col">Profit</th>
+                                        <th scope="col">Profit_Margin</th>
+                                        <th scope="col">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SSM001</th>
+                                        <td>Nike Shoes</td>
+                                        <td>Sport</td>
+                                        <td>10 11 12</td>
+                                        <td>50</td>
+                                        <td>SP001</td>
+                                        <td>Theekshana</td>
+                                        <td>7000.00</td>
+                                        <td>6000.00</td>
+                                        <td>1000.00</td>
+                                        <td>1000.00</td>
+                                        <td>
+                                            <div class="d-flex justify-content-center Istatus">
+                                                <h4>Available</h4>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SSM002</th>
+                                        <td>Nike Shoes</td>
+                                        <td>Sport</td>
+                                        <td>10 11 12</td>
+                                        <td>50</td>
+                                        <td>SP001</td>
+                                        <td>Theekshana</td>
+                                        <td>7000.00</td>
+                                        <td>6000.00</td>
+                                        <td>1000.00</td>
+                                        <td>1000.00</td>
+                                        <td>
+                                            <div class="d-flex justify-content-center Istatus">
+                                                <h4>Available</h4>
+                                            </div>
+                                        </td>
                                       </tr>
                                       
                                     </tbody>

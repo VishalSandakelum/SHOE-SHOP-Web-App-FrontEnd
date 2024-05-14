@@ -1,0 +1,37 @@
+.inventorydetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 970px;
+    margin-bottom: 200px;
+}
+
+.inventorydetailsfirstcontainer{
+    height: 520px;
+}
+
+.inventorydetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 100%;
+}
+
+.inventorydetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>th, .inventorydetailsfifthcontainer>div>table:nth-child(2)>tbody>tr>td{
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
+}
+
+.Istatus{
+    width: 60px;
+    height: 23px;
+    border-radius: 20px;
+    color: rgb(0, 166, 0);
+    background-color: rgba(65, 254, 65, 0.208);
+    margin-top: 10px;
+}
+
+.Istatus>h4{
+    font-family: "Dongle", cursive;
+    font-size: 20px;
+    font-weight: 550;
+    height: 10px;
+}
