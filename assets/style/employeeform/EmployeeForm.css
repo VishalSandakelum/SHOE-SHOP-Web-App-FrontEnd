@@ -46,7 +46,7 @@
     height: 400px;
 }
 
-#image-preview {
+#image-preview,#inventory-image-preview {
     width: 200px;
     height: 200px;
     border: 2px solid #ddd;
@@ -58,20 +58,20 @@
     border-radius:10px;
   }
   
-  #image-preview img {
+  #image-preview img,#inventory-image-preview img {
     max-width: 100%;
     max-height: 100%;
   }
   
-  #file-input {
+  #file-input,#inventory-file-input {
     display: none;
   }
 
-  #image-preview>img:nth-child(2){
+  #image-preview>img:nth-child(2),#inventory-image-preview>img:nth-child(2){
     width: 60px;
   }
 
-  .employeedetailsfirstcontainer>div{
+  .employeedetailsfirstcontainer>div,.inventorydetailsfirstcontainer>div{
     position: relative;
     height: 100%;
     width: calc(95%/3);
