@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/style/inventoryform/InventoryForm.css">
     <link rel="stylesheet" href="assets/style/supplierform/SupplierForm.css">
     <link rel="stylesheet" href="assets/style/customerform/CustomerForm.css">
+    <link rel="stylesheet" href="assets/style/saleform/SaleForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -851,7 +852,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center customerformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center customerformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="customerformtitle">
                         <h2>Add Customer</h2>
@@ -1016,6 +1017,139 @@
                                         <td>0762656420</td>
                                         <td>Theekshana@gmail.com</td>
                                         <td>05-15-2024</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center saleformmaincontainer">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="saleformtitle">
+                        <h2>Add Sales</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between salesdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between salesdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Item Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Item Description</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Item Desc">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Item QTY</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Item QTY">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Payement Method</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Method</option>
+                                        <option class="selectedfont" value="1">CASH</option>
+                                        <option class="selectedfont" value="2">CARD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Order No</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Order No">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Size">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Total Price</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Total Price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Added Points</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Added Points">
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Customer Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Unit Price</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Unit Price">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Purchase Date</label>
+                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Purchase Date">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Cashier Name</label>
+                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Cashier Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between salesdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Update</button>
+                            <button type="button" class="btn btn-outline-success">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Get</button>
+                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center salesdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Sales Details</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Order_No</th>
+                                        <th scope="col">Customer_Name</th>
+                                        <th scope="col">Item_Desc</th>
+                                        <th scope="col">Size</th>
+                                        <th scope="col">Unit_Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Total_Price</th>
+                                        <th scope="col">Purchase_Date</th>
+                                        <th scope="col">Payement</th>
+                                        <th scope="col">Points</th>
+                                        <th scope="col">Cashier_Name</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">SA001</th>
+                                        <td>OR001</td>
+                                        <td>Kasun</td>
+                                        <td>Nike Shoes</td>
+                                        <td>10</td>
+                                        <td>5000.00</td>
+                                        <td>1</td>
+                                        <td>5000.00</td>
+                                        <td>05-15-2024</td>
+                                        <td>CARD</td>
+                                        <td>10</td>
+                                        <td>Theekshana</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">SA002</th>
+                                        <td>OR002</td>
+                                        <td>Kasun</td>
+                                        <td>Nike Shoes</td>
+                                        <td>10</td>
+                                        <td>5000.00</td>
+                                        <td>1</td>
+                                        <td>5000.00</td>
+                                        <td>05-15-2024</td>
+                                        <td>CARD</td>
+                                        <td>10</td>
+                                        <td>Theekshana</td>
                                       </tr>
                                       
                                     </tbody>

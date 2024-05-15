@@ -1,0 +1,16 @@
+.salesdetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 850px;
+    margin-bottom: 200px;
+}
+
+.salesdetailsfirstcontainer{
+    height: 400px;
+}
+
+.salesdetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 100%;
+}
