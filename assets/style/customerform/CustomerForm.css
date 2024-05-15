@@ -1,0 +1,26 @@
+.customerdetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 1200px;
+    margin-bottom: 200px;
+    background-color: red;
+}
+
+.customerdetailsfirstcontainer{
+    height: 320px;
+    background-color: green;
+}
+
+.customerdetailssecondcontainer{
+    height: 220px;
+}
+
+.customerdetailsthirdcontainer{
+    height: 150px;
+}
+
+.customerdetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 1250px;
+}

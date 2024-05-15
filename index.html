@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/style/employeeform/EmployeeForm.css">
     <link rel="stylesheet" href="assets/style/inventoryform/InventoryForm.css">
     <link rel="stylesheet" href="assets/style/supplierform/SupplierForm.css">
+    <link rel="stylesheet" href="assets/style/customerform/CustomerForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -701,7 +702,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center supplierformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center supplierformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="supplierformtitle">
                         <h2>Add Supplier</h2>
@@ -784,7 +785,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between inventorydetailsforthcontainer">
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between supplierdetailsforthcontainer">
                             <button type="button" class="btn btn-outline-primary">Save</button>
                             <button type="button" class="btn btn-outline-secondary">Update</button>
                             <button type="button" class="btn btn-outline-success">Delete</button>
@@ -841,6 +842,180 @@
                                         <td>0762656420</td>
                                         <td>0762656420</td>
                                         <td>Theekshana@gmail.com</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center customerformmaincontainer">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="customerformtitle">
+                        <h2>Add Customer</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between customerdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Join Date</label>
+                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Join Date">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Date Of Birth</label>
+                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Date Of Birth">
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Level</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Level</option>
+                                        <option class="selectedfont" value="1">GOLD</option>
+                                        <option class="selectedfont" value="2">SILVER</option>
+                                        <option class="selectedfont" value="2">BRONZE</option>
+                                        <option class="selectedfont" value="2">NEW</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Gender</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Gender</option>
+                                        <option class="selectedfont" value="1">MALE</option>
+                                        <option class="selectedfont" value="2">FEMALE</option>
+                                        <option class="selectedfont" value="2">OTHER</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Total Points</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Points">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailssecondcontainer">
+                            <div class="secondtcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                </div>
+                            </div>
+                            <div class="secondtcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                </div>
+                            </div>
+                            <div class="secondtcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-between customerdetailsthirdcontainer">
+                            <div class="thirdcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                </div>
+                            </div>
+                            <div class="thirdcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="thirdcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Recent Purchase Date</label>
+                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Recent Purchase Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between customerdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Update</button>
+                            <button type="button" class="btn btn-outline-success">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Get</button>
+                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center customerdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Customer Details</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Join_Date</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Points</th>
+                                        <th scope="col">Date_of_Birth</th>
+                                        <th scope="col">Building_No</th>
+                                        <th scope="col">Lane</th>
+                                        <th scope="col">City</th>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Contact_Number</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Recent_Purchase_Date</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">CU001</th>
+                                        <td>Theekshana</td>
+                                        <td>MALE</td>
+                                        <td>05-15-2024</td>
+                                        <td>GOLD</td>
+                                        <td>1000.00</td>
+                                        <td>05-05-2003</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                        <td>05-15-2024</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">CU002</th>
+                                        <td>Theekshana</td>
+                                        <td>MALE</td>
+                                        <td>05-15-2024</td>
+                                        <td>GOLD</td>
+                                        <td>1000.00</td>
+                                        <td>05-05-2003</td>
+                                        <td>BI001</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>Galle</td>
+                                        <td>0762656420</td>
+                                        <td>Theekshana@gmail.com</td>
+                                        <td>05-15-2024</td>
                                       </tr>
                                       
                                     </tbody>
