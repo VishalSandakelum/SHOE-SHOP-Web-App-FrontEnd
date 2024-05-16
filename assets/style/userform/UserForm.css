@@ -1,0 +1,16 @@
+.userdetailsmaincontainer{
+    position: relative;
+    width: 97%;
+    height: 550px;
+    margin-bottom: 200px;
+}
+
+.userdetailsfirstcontainer{
+    height: 100px;
+}
+
+.userdetailsfifthcontainer>div>div:nth-child(1){
+    border-bottom: 1px solid #8a8a8a;
+    position: relative;
+    width: 100%;
+}

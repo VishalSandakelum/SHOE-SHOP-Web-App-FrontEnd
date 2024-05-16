@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/style/supplierform/SupplierForm.css">
     <link rel="stylesheet" href="assets/style/customerform/CustomerForm.css">
     <link rel="stylesheet" href="assets/style/saleform/SaleForm.css">
+    <link rel="stylesheet" href="assets/style/userform/UserForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1026,7 +1027,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center saleformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center saleformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="saleformtitle">
                         <h2>Add Sales</h2>
@@ -1150,6 +1151,81 @@
                                         <td>CARD</td>
                                         <td>10</td>
                                         <td>Theekshana</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center userformmaincontainer">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="userformtitle">
+                        <h2>Add User</h2>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="d-flex flex-wrap align-content-between userdetailsmaincontainer">
+                        <div class="col-12 d-flex flex-wrap justify-content-between userdetailsfirstcontainer">
+                            <div class="firstcontainerfirstpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="firstcontainersecondpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Password</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Password">
+                                </div>
+                            </div>
+                            <div class="firstcontainerthirdpart">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label labelfont">Role</label>
+                                    <select class="form-select inputfont" aria-label="Default select example">
+                                        <option class="selectedfont" selected>Select Role</option>
+                                        <option class="selectedfont" value="1">USER</option>
+                                        <option class="selectedfont" value="2">ADMIN</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 d-flex flex-wrap align-items-center justify-content-between userdetailsforthcontainer">
+                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Update</button>
+                            <button type="button" class="btn btn-outline-success">Delete</button>
+                            <button type="button" class="btn btn-outline-danger">Get</button>
+                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap justify-content-center userdetailsfifthcontainer">
+                            <div class="col-11">
+                                <div>
+                                    <h4>Sales Details</h4>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Password</th>
+                                        <th scope="col">Role</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">TheekshanaDeSilva21@gmail.com</th>
+                                        <td>1234@Theek</td>
+                                        <td>ADMIN</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">HirushaNavod21@gmail.com</th>
+                                        <td>1234@Hiru</td>
+                                        <td>ADMIN</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">ManithLakvindu21@gmail.com</th>
+                                        <td>1234@Mani</td>
+                                        <td>ADMIN</td>
                                       </tr>
                                       
                                     </tbody>
