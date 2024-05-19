@@ -24,7 +24,7 @@ function clearAllCustomerField(){
     $('.customercode').val('');
     $('.customername').val('');
     $('.customergender').prop('selectedIndex', 0).focus();
-    $('.joindate').text('');
+    $('.joindate').val('');
     $('.customerlevel').prop('selectedIndex', 0).focus();
     $('.customertotalpoints').val('');
     $('.customerdob').val('');

@@ -13,7 +13,8 @@ $('.customerdatasave').click(function(){
         },
     
         success: function(resp){
-            showAlert("success","Success","Customer"+resp.customerCode+"Saved Sucessfully.");
+            showAlert("success","Success","Customer "+resp.customerCode+" Saved Sucessfully.");
+            clearAllCustomerField();
         },
         error:function(resp){
         }
@@ -79,7 +80,26 @@ $('.customerdataupdate').click(function(){
             clearAllCustomerField();
         },
         error:function(resp){
-            showAlert("error","Oops",resp.message)
+            showAlert("waring","Oops","Invalid Data.")
+        }
+    });
+});
+
+$('.customerdatadelete').click(function(){
+    $.ajax({
+        url:(customerURI+'/'+$('.customercode').val()),
+        method:'DELETE',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            showAlert("success","Success","Customer "+$('.customercode').val()+" Delete Sucessfully.");
+            clearAllCustomerField();
+        },
+        error:function(resp){
+            showAlert("error","Oops","This Customer "+$('.customercode').val()+" Not Found.");
         }
     });
 });
