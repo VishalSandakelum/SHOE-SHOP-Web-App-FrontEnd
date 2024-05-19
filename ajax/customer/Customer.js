@@ -20,6 +20,48 @@ $('.customerdatasave').click(function(){
     });
 });
 
+$('.customerdataget').click(function(){
+    $.ajax({
+        url:(customerURI+'/'+$('.customercode').val()),
+        method:'PATCH',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            clearAllCustomerField();
+            $('.customercode').val(resp.customerCode)
+            $('.customername').val(resp.customerName),
+            $('.customergender option').each(function() {
+                if ($(this).text() === resp.gender) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.joindate').val(formatDate(resp.joinDate)),
+            $('.customerlevel option').each(function() {
+                if ($(this).text() === resp.level) {
+                    $(this).prop('selected', true);
+                }
+            }),
+            $('.customertotalpoints').val(resp.totalPoints),
+            $('.customerdob').val(formatDate(resp.dob)),
+            $('.customeraddressline01').val(resp.addressLine01),
+            $('.customeraddressline02').val(resp.addressLine02),
+            $('.customeraddressline03').val(resp.addressLine03),
+            $('.customeraddressline04').val(resp.addressLine04),
+            $('.customeraddressline05').val(resp.addressLine05),
+            $('.customercontactno').val(resp.contactNo),
+            $('.customeremail').val(resp.email),
+            $('.customerrecentpurchasedatetime').val(formatDate(resp.recentPurchaseDateTime))
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.message);
+            clearAllCustomerField();
+        }
+    });
+});
+
 function getAllCustomerDataFromField(){
     return{
         customerCode: null,

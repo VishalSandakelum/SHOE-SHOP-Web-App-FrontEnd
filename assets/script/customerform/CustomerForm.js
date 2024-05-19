@@ -19,3 +19,21 @@ $('.customerlevel').change(function(){
             alert('No valid level selected');
     }
 });
+
+function clearAllCustomerField(){
+    $('.customercode').val('');
+    $('.customername').val('');
+    $('.customergender').prop('selectedIndex', 0).focus();
+    $('.joindate').text('');
+    $('.customerlevel').prop('selectedIndex', 0).focus();
+    $('.customertotalpoints').val('');
+    $('.customerdob').val('');
+    $('.customeraddressline01').val('');
+    $('.customeraddressline02').val('');
+    $('.customeraddressline03').val('');
+    $('.customeraddressline04').val('');
+    $('.customeraddressline05').val('');
+    $('.customercontactno').val('');
+    $('.customeremail').val('');
+    $('.customerrecentpurchasedatetime').val('');
+}
