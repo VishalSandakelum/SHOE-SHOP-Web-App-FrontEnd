@@ -22,3 +22,24 @@ imagePreview.addEventListener('click', function() {
     console.log('clicked')
   fileInput.click();
 });
+
+function clearAllEmployeeField(){
+  $('.employeecode').val('');
+  $('.employeename').val('');
+  $('.employeegender').prop('selectedIndex', 0).focus();
+  $('.employeestatus').prop('selectedIndex', 0).focus();
+  $('.employeedesignation').val('');
+  $('.employeerole').val('');
+  $('.employeedob').val('');
+  $('.employeejoindate').val('');
+  $('.employeebranch').val('');
+  $('.employeeaddressLine01').val('');
+  $('.employeeaddressLine02').val('');
+  $('.employeeaddressLine03').val('');
+  $('.employeeaddressLine04').val('');
+  $('.employeeaddressLine05').val('');
+  $('.employeecontactno').val('');
+  $('.employeeemail').val('');
+  $('.emergencycontact').val('');
+  $('.employeeinformincaseofEmergency').val('');
+}
