@@ -104,6 +104,61 @@ $('.customerdatadelete').click(function(){
     });
 });
 
+$('.customeralldataget').click(function(){
+    $.ajax({
+        url:customerURI,
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            $('.customertable td').parent().remove();
+            for(var i in resp){
+                let customerCode = resp[i].customerCode;
+                let customerName = resp[i].customerName;
+                let gender = resp[i].gender;
+                let joinDate = formatDate(resp[i].joinDate);
+                let level = resp[i].level;
+                let totalPoints = resp[i].totalPoints;
+                let dob = formatDate(resp[i].dob);
+                let addressLine01 = resp[i].addressLine01;
+                let addressLine02 = resp[i].addressLine02;
+                let addressLine03 = resp[i].addressLine03;
+                let addressLine04 = resp[i].addressLine04;
+                let addressLine05 = resp[i].addressLine05;
+                let contactNo = resp[i].contactNo;
+                let email = resp[i].email;
+                let recentPurchaseDateTime = formatDate(resp[i].recentPurchaseDateTime);
+
+                let customer = Object.assign({},Customer);
+                customer.customerCode = customerCode;
+                customer.customerName = customerName;
+                customer.gender = gender;
+                customer.joinDate = joinDate;
+                customer.level = level;
+                customer.totalPoints = totalPoints;
+                customer.dob = dob;
+                customer.addressLine01 = addressLine01;
+                customer.addressLine02 = addressLine02;
+                customer.addressLine03 = addressLine03;
+                customer.addressLine04 = addressLine04;
+                customer.addressLine05 = addressLine05;
+                customer.contactNo = contactNo;
+                customer.email = email;
+                customer.recentPurchaseDateTime = recentPurchaseDateTime;
+
+                AllCustomer.push(customer);
+                dataToCustomerTable(customer);
+            }
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+});
+
 function getAllCustomerDataFromField(){
     return{
         customerCode: null,

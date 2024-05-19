@@ -1,4 +1,22 @@
 $('.customertotalpoints').attr('readonly', true)
+let AllCustomer = [];
+let Customer = {
+    customerCode:'',
+    customerName:'',
+    gender:'',
+    joinDate:'',
+    level:'',
+    totalPoints:'',
+    dob:'',
+    addressLine01:'',
+    addressLine02:'',
+    addressLine03:'',
+    addressLine04:'',
+    addressLine05:'',
+    contactNo:'',
+    email:'',
+    recentPurchaseDateTime:''
+};
 
 $('.customerlevel').change(function(){
     console.log($(this).val());
@@ -36,4 +54,26 @@ function clearAllCustomerField(){
     $('.customercontactno').val('');
     $('.customeremail').val('');
     $('.customerrecentpurchasedatetime').val('');
+}
+
+function dataToCustomerTable(customer){
+
+    let row = `<tr>
+                <th scope="row">${customer.customerCode}</th>
+                <td>${customer.customerName}</td>
+                <td>${customer.gender}</td>
+                <td>${customer.joinDate}</td>
+                <td>${customer.level}</td>
+                <td>${customer.totalPoints}</td>
+                <td>${customer.dob}</td>
+                <td>${customer.addressLine01}</td>
+                <td>${customer.addressLine02}</td>
+                <td>${customer.addressLine03}</td>
+                <td>${customer.addressLine04}</td>
+                <td>${customer.addressLine05}</td>
+                <td>${customer.email}</td>
+                <td>${customer.recentPurchaseDateTime}</td>
+              </tr>`;
+
+    $(".customertable").append(row);
 }
