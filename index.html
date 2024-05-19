@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/style/customerform/CustomerForm.css">
     <link rel="stylesheet" href="assets/style/saleform/SaleForm.css">
     <link rel="stylesheet" href="assets/style/userform/UserForm.css">
+    <link rel="stylesheet" href="assets/style/profilechangedbox/ProfileChangedForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +41,9 @@
                     <img src="assets/img/DashBoard/nothing notification.png" alt="notification">
                 </div>
                 <div class="d-flex justify-content-between align-items-center profilepictures">
-                    <img src="assets/img/DashBoard/default_men_profile_pictures.png" alt="default profile pic">
+                    <button class="d-flex flex-wrap justify-content-center profileicon">
+                        <img src="assets/img/DashBoard/default_men_profile_pictures.png" alt="default profile pic">
+                    </button>
                     <div class="d-flex flex-wrap profiledetails">
                         <h5>Vishal Sandakelum</h5>
                         <h5>Sales Admin</h5>
@@ -64,49 +67,49 @@
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center customerbutton">
                         <i class="bi bi-people-fill"></i>
                         <div>
                             <span>Customer</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center employeebutton">
                         <i class="bi bi-person-badge"></i>
                         <div>
                             <span>Employee</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center supplierbutton">
                         <i class="bi bi-person-lines-fill"></i>
                         <div>
                             <span>Supplier</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center inventorybutton">
                         <i class="fa fa-cube" aria-hidden="true"></i>
                         <div>
                             <span>Inventory</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center salesbutton">
                         <i class="fa fa-comments" aria-hidden="true"></i>
                         <div>
-                            <span>Messages</span>
+                            <span>Sale</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
-                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center userbutton">
+                        <i class="fa fa-user" aria-hidden="true"></i>
                         <div>
-                            <span>Settings</span>
+                            <span>User</span>
                         </div>
                     </button>
 
-                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center">
+                    <button class="btn rounded-3 col-10 d-flex justify-content-center align-items-center logoutbutton">
                         <i class="bi bi-box-arrow-left"></i>
                         <div>
                             <span>Logout</span>
@@ -116,7 +119,7 @@
             </div>
         </div>
         <div class="rightside">
-            <div class="col-12 rightsidemaincontainer" style="display: none;">
+            <div class="col-12 rightsidemaincontainer">
                 <div class="d-flex managedetails align-items-center">
                     <div class="col-3">
                         <div class="col-12 d-flex align-items-center">
@@ -864,46 +867,46 @@
                             <div class="firstcontainerfirstpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Customer Code</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <input type="email" class="form-control inputfont customercode" id="exampleFormControlInput1" placeholder="Enter Code">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Join Date</label>
-                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Join Date">
+                                    <input type="date" class="form-control inputfont joindate" id="exampleFormControlInput1" placeholder="Enter Join Date">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Date Of Birth</label>
-                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Date Of Birth">
+                                    <input type="date" class="form-control inputfont customerdob" id="exampleFormControlInput1" placeholder="Enter Date Of Birth">
                                 </div>
                             </div>
                             <div class="firstcontainersecondpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Name">
+                                    <input type="email" class="form-control inputfont customername" id="exampleFormControlInput1" placeholder="Enter Name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Level</label>
-                                    <select class="form-select inputfont" aria-label="Default select example">
+                                    <select class="form-select inputfont customerlevel" aria-label="Default select example">
                                         <option class="selectedfont" selected>Select Level</option>
                                         <option class="selectedfont" value="1">GOLD</option>
                                         <option class="selectedfont" value="2">SILVER</option>
-                                        <option class="selectedfont" value="2">BRONZE</option>
-                                        <option class="selectedfont" value="2">NEW</option>
+                                        <option class="selectedfont" value="3">BRONZE</option>
+                                        <option class="selectedfont" value="4">NEW</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="firstcontainerthirdpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Gender</label>
-                                    <select class="form-select inputfont" aria-label="Default select example">
+                                    <select class="form-select inputfont customergender" aria-label="Default select example">
                                         <option class="selectedfont" selected>Select Gender</option>
                                         <option class="selectedfont" value="1">MALE</option>
                                         <option class="selectedfont" value="2">FEMALE</option>
-                                        <option class="selectedfont" value="2">OTHER</option>
+                                        <option class="selectedfont" value="3">OTHER</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Total Points</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Points">
+                                    <input type="email" class="form-control inputfont customertotalpoints" id="exampleFormControlInput1" placeholder="Enter Points">
                                 </div>
                             </div>
                         </div>
@@ -911,27 +914,27 @@
                             <div class="secondtcontainerfirstpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Building No</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Building No">
+                                    <input type="email" class="form-control inputfont customeraddressline01" id="exampleFormControlInput1" placeholder="Enter Building No">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Main State</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main State">
+                                    <input type="email" class="form-control inputfont customeraddressline02" id="exampleFormControlInput1" placeholder="Enter Main State">
                                 </div>
                             </div>
                             <div class="secondtcontainersecondpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Lane</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Lane">
+                                    <input type="email" class="form-control inputfont customeraddressline03" id="exampleFormControlInput1" placeholder="Enter Lane">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Postal Code</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Postal Code">
+                                    <input type="email" class="form-control inputfont customeraddressline04" id="exampleFormControlInput1" placeholder="Enter Postal Code">
                                 </div>
                             </div>
                             <div class="secondtcontainerthirdpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Main City</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Main City">
+                                    <input type="email" class="form-control inputfont customeraddressline05" id="exampleFormControlInput1" placeholder="Enter Main City">
                                 </div>
                             </div>
                         </div>
@@ -939,24 +942,24 @@
                             <div class="thirdcontainerfirstpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Contact Number</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Contact Number">
+                                    <input type="email" class="form-control inputfont customercontactno" id="exampleFormControlInput1" placeholder="Enter Contact Number">
                                 </div>
                             </div>
                             <div class="thirdcontainersecondpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Email</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Email">
+                                    <input type="email" class="form-control inputfont customeremail" id="exampleFormControlInput1" placeholder="Enter Email">
                                 </div>
                             </div>
                             <div class="thirdcontainerthirdpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Recent Purchase Date</label>
-                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Recent Purchase Date">
+                                    <input type="date" class="form-control inputfont customerrecentpurchasedatetime" id="exampleFormControlInput1" placeholder="Enter Recent Purchase Date">
                                 </div>
                             </div>
                         </div>
                         <div class="col-7 d-flex flex-wrap align-items-center justify-content-between customerdetailsforthcontainer">
-                            <button type="button" class="btn btn-outline-primary">Save</button>
+                            <button type="button" class="btn btn-outline-primary customerdatasave">Save</button>
                             <button type="button" class="btn btn-outline-secondary">Update</button>
                             <button type="button" class="btn btn-outline-success">Delete</button>
                             <button type="button" class="btn btn-outline-danger">Get</button>
@@ -1160,7 +1163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center align-items-center userformmaincontainer">
+            <div class="col-12 d-flex justify-content-center align-items-center userformmaincontainer" style="display: none !important;">
                 <div class="d-flex flex-wrap justify-content-center">
                     <div class="userformtitle">
                         <h2>Add User</h2>
@@ -1236,10 +1239,55 @@
                 </div>
             </div>
         </div>
+        <div class="col-12 profilechangemaincontainer" style="display: none;">
+            <div class="col-5 profilechnagedbox">
+                <div class="col-12 profilechnagedboxheader d-flex align-items-center justify-content-end">
+                    <button class="profilechangedbocclosebtn">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center profilechnagedboxbody">
+                    <div class="profilechnagedboxinnerbody d-flex flex-wrap">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="imagepreview">
+                                <img src="assets/img/DashBoard/default_men_profile_pictures.png" alt="profile">
+                            </div>
+                            <input type="file" class="fileinput" accept="image/*">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </div>
+                            <button type="button" class="btn btn-primary profilepicuploadbtn">Upload New Photo</button>
+                            <div class="profpicdetailscontainer">
+                                <h5 class="align-self-end">Upload a new avatar.Larger image will be resized automatically.</h5>
+                                <h5 class="align-self-end">Maximum upload size is 1MB</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-center align-items-center profilechnagedboxinnerbodysecondpart">
+                            <div class="col-10">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label profilelabelfont">Email</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter New Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label profilelabelfont">Password</label>
+                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter New Password">
+                                </div>
+                                <button type="button" class="align-self-center btn btn-danger profilepicupdatebtn">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="assets/script/jquery-3.7.1.min.js"></script>
     <script src="assets/script/dashboard/DashBoard.js"></script>
     <script src="assets/script/employeeform/EmployeeForm.js"></script>
     <script src="assets/script/inventoryform/InventoryForm.js"></script>
+    <script src="assets/script/customerform/CustomerForm.js"></script>
+    <!--Ajax Script For Communicate With Server.-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="ajax/GlobalAttr.js"></script>
+    <script src="ajax/customer/Customer.js"></script>
 </body>
 </html>

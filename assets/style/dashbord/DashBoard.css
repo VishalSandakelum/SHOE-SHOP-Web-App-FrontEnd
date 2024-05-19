@@ -38,8 +38,20 @@ header{
     width: 150px;
 }
 
-.profilepictures>img{
+.profilepictures>button{
     width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+    border: 0px;
+    position: relative;
+    background-color: green;
+}
+
+.profilepictures>button>img{
+    position: relative;
+    height: inherit;
+    width: inherit;
 }
 
 .notification>img{

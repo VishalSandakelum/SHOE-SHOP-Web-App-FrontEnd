@@ -1,0 +1,119 @@
+.profilechangemaincontainer{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.474);
+}
+
+.profilechnagedbox{
+    position: absolute;
+    height: 50%;
+    background-color: #f6f9fe;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.profilechnagedboxheader{
+    height: 30px;
+}
+
+.profilechnagedboxheader>button{
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.profilechnagedboxbody{
+    position: relative;
+    height: 340px;
+}
+
+.profilechnagedboxinnerbody{
+    position: relative;
+    height: 320px;
+    width: 95%;
+    text-align: center;
+}
+
+.profilechnagedboxinnerbody>div{
+    position: relative;
+    height: 100%;
+    width: calc(100%/2);
+}
+
+.profilechnagedboxinnerbody>div:nth-child(1){
+    border-right: 1px solid gray;
+}
+
+.profilechnagedboxinnerbody>div:nth-child(1)>div:nth-child(1){
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+    left: 15px;
+}
+
+.profilechnagedboxinnerbody>div:nth-child(1)>div:nth-child(1)>img{
+    height: inherit;
+    width: inherit;
+}
+
+.profilechnagedboxinnerbody>div:nth-child(1)>div:nth-child(3){
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    position: relative;
+    right: 35px;
+    top: 20px;
+    border-radius: 100%;
+    border: 1px solid rgb(173, 173, 173);
+    cursor: pointer;
+}
+
+.profilepicuploadbtn{
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    bottom: 25%;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    line-height: 20px;
+}
+
+.profpicdetailscontainer{
+    position: relative;
+    top: 48px;
+    height: 60px;
+}
+
+.profpicdetailscontainer>h5{
+    font-size: 18px;
+    font-family: "Dongle", cursive;
+}
+
+.profilechnagedboxinnerbodysecondpart>div{
+    height: 250px;
+}
+
+.profilelabelfont{
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    height: 25px;
+    position: relative;
+}
+
+.profilepicupdatebtn{
+    height: 40px;
+    width: 200px;
+    bottom: 25%;
+    font-family: "Dongle", cursive;
+    font-size: 25px !important;
+    line-height: 20px;
+}
