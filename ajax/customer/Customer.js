@@ -62,6 +62,28 @@ $('.customerdataget').click(function(){
     });
 });
 
+$('.customerdataupdate').click(function(){
+    const customerData = getAllCustomerDataFromField();
+    console.log(customerData.level);
+    $.ajax({
+        url:(customerURI+'/'+$('.customercode').val()),
+        method:'PUT',
+        data:JSON.stringify(customerData),
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            showAlert("success","Success","Customer "+$('.customercode').val()+" Updated Sucessfully.");
+            clearAllCustomerField();
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.message)
+        }
+    });
+});
+
 function getAllCustomerDataFromField(){
     return{
         customerCode: null,
