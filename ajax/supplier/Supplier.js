@@ -1,0 +1,1 @@
+let supplierURI = 'http://localhost:8080/app/api/v0/suppliers'
