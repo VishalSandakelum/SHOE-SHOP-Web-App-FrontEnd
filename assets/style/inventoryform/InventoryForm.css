@@ -35,3 +35,37 @@
     font-weight: 550;
     height: 10px;
 }
+
+.inventoryformpopupmaincontainer{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.474);
+}
+
+.inventoryformpopupmaincontainer>div:nth-child(1){
+    position: relative;
+    height: 50%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inventorypopupformheader{
+    position: relative;
+    height: 40px;
+}
+
+.inventorypopupformclosebtn{
+    background-color: transparent;
+    border: 0px;
+}
+
+.inventorypopupformbody{
+    position: relative;
+    height: 400px;
+    width: 90%;
+}
+
+.inventorypopupformbody>div{
+    width: calc(95%/2);
+}
