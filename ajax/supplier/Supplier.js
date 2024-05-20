@@ -55,6 +55,46 @@ $('.supplierdataget').click(function(){
     });
 });
 
+$('.supplierdataupdate').click(function(){
+    const supplierData = getAllSupplierDataFromField();
+    $.ajax({
+        url:(supplierURI+'/'+$('.suppliercode').val()),
+        method:'PUT',
+        data:JSON.stringify(supplierData),
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            showAlert("success","Success","Supplier "+$('.suppliercode').val()+" Updated Sucessfully.");
+            clearAllSupplierField();
+        },
+        error:function(resp){
+            showAlert("warning","Oops","Invalid Data.")
+        }
+    });
+});
+
+$('.supplierdatadelete').click(function(){
+    $.ajax({
+        url:(supplierURI+'/'+$('.suppliercode').val()),
+        method:'DELETE',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            showAlert("success","Success","Supplier "+$('.suppliercode').val()+" Delete Sucessfully.");
+            clearAllSupplierField();
+        },
+        error:function(resp){
+            showAlert("error","Oops","This Customer "+$('.suppliercode').val()+" Not Found.");
+        }
+    });
+});
+
 function getAllSupplierDataFromField(){
     return{
         supplierCode: $('.suppliercode').val(),

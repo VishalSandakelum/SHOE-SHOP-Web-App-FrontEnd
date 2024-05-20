@@ -80,7 +80,7 @@ $('.customerdataupdate').click(function(){
             clearAllCustomerField();
         },
         error:function(resp){
-            showAlert("waring","Oops","Invalid Data.")
+            showAlert("warning","Oops","Invalid Data.")
         }
     });
 });
