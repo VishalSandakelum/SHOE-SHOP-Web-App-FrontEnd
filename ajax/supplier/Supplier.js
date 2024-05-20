@@ -95,6 +95,55 @@ $('.supplierdatadelete').click(function(){
     });
 });
 
+$('.supplieralldataget').click(function(){
+    $.ajax({
+        url:supplierURI,
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            $('.suppliertable td').parent().remove();
+            for (var i in resp) {
+                let supplierCode = resp[i].supplierCode;
+                let supplierName = resp[i].supplierName;
+                let category = resp[i].category;
+                let addressLine01 = resp[i].addressLine01;
+                let addressLine02 = resp[i].addressLine02;
+                let addressLine03 = resp[i].addressLine03;
+                let addressLine04 = resp[i].addressLine04;
+                let addressLine05 = resp[i].addressLine05;
+                let addressLine06 = resp[i].addressLine06;
+                let contactNo1 = resp[i].contactNo1;
+                let landLineNo = resp[i].landLineNo;
+                let email = resp[i].email;
+            
+                let supplier = Object.assign({}, Supplier);
+                supplier.supplierCode = supplierCode;
+                supplier.supplierName = supplierName;
+                supplier.category = category;
+                supplier.addressLine01 = addressLine01;
+                supplier.addressLine02 = addressLine02;
+                supplier.addressLine03 = addressLine03;
+                supplier.addressLine04 = addressLine04;
+                supplier.addressLine05 = addressLine05;
+                supplier.addressLine06 = addressLine06;
+                supplier.contactNo1 = contactNo1;
+                supplier.landLineNo = landLineNo;
+                supplier.email = email;
+            
+                AllSupplier.push(supplier);
+                dataToSupplierTable(supplier);
+            }            
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+});
+
 function getAllSupplierDataFromField(){
     return{
         supplierCode: $('.suppliercode').val(),
