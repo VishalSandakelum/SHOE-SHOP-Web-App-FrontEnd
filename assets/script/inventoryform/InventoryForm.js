@@ -1,6 +1,24 @@
 const inventoryfileInput = document.getElementById('inventory-file-input');
 const inventoryimagePreview = document.getElementById('inventory-image-preview');
 $('.inventorycode').attr('readonly', true);
+let selected = [];
+let AllInventory = [];
+let Inventory = {
+  itemCode: '',
+  itemDescription: '',
+  itemPicture: '',
+  category: '',
+  size: '',
+  supplierCode: '',
+  supplierName: '',
+  unitPriceSale: '',
+  unitPriceBuy: '',
+  expectedProfit: '',
+  profitMargin: '',
+  status: '',
+  quantity: ''
+};
+
 
 inventoryfileInput.addEventListener('change', function() {
   const file = this.files[0];
@@ -33,7 +51,6 @@ $('.inventorypopupformclosebtn').click(function(){
 });
 
 $('.inventorypopupbtn').click(function(){
-  let selected = [];
   if($('.occasion').val()!='Select Occasion'){
     selected.length=0;
     switch($('.occasion').val()) {
@@ -127,4 +144,75 @@ function clearInventoryPopUpFormField(){
   $('.shoeverities').prop('selectedIndex', 0).focus();
   $('.otherverities').prop('selectedIndex', 0).focus();
   $('.inventorycategory').prop('selectedIndex', 0).focus();
+}
+
+function clearAllInventoryField(){
+  $('.inventorycode').val('');
+  $('.inventorydescription').val('');
+  inventoryImageToDefault();
+  $('.inventoryquantity').val('');
+  $('.inventorystatus').prop('selectedIndex', 0).focus();
+  $('.inventorysize').val('');
+  $('.inventorysuppliercode').val('');
+  $('.inventorysuppliername').val('');
+  $('.inventoryexpectedprofit').val('');
+  $('.inventorybuyprice').val('');
+  $('.inventorysaleprice').val('');
+  $('.inventoryprofitmargin').val('');
+}
+
+function dataToInventoryTable(inventory){
+  let backgroundc;
+  let fcolor;
+  if(inventory.status=="Available"){
+    backgroundc = 'rgba(65, 254, 65, 0.208)';
+    fcolor = 'rgb(0, 166, 0)';
+  }else if(inventory.status=="Low"){
+    backgroundc = 'rgba(222, 254, 65, 0.208)';
+    fcolor = 'rgb(166, 166, 0)';
+  }else{
+    backgroundc = 'rgba(254, 65, 65, 0.208)';
+    fcolor = 'rgb(166, 0, 0)';
+  }
+
+  let row = `<tr>
+                <th scope="row">${inventory.itemCode}</th>
+                <td>${inventory.itemDescription}</td>
+                <td>${inventory.category}</td>
+                <td>${inventory.size}</td>
+                <td>${inventory.quantity}</td>
+                <td>${inventory.supplierCode}</td>
+                <td>${inventory.supplierName}</td>
+                <td>${inventory.unitPriceSale}</td>
+                <td>${inventory.unitPriceBuy}</td>
+                <td>${inventory.expectedProfit}</td>
+                <td>${inventory.profitMargin}</td>
+                <td>
+                  <div class="d-flex justify-content-center Istatus" style="background-color: ${backgroundc}; color: ${fcolor};">
+                    <h4>${inventory.status}</h4>
+                  </div>
+                </td>
+            </tr>`;
+
+  $(".inventorytable").append(row);
+}
+
+function findInventoryCategory(){
+  if(selected.length==3){
+    if(selected[2]=="M"){
+      return "MALE";
+    }else{
+      return "FEMALE"
+    }
+  }else{
+    return "OTHER";
+  }
+}
+
+function inventoryImageToDefault(){
+  const defaultImg = document.createElement('img');
+  defaultImg.src = 'assets/img/EmployeeForm/imageupload.png';
+  inventoryimagePreview.innerHTML = '';
+  inventoryimagePreview.appendChild(defaultImg);
+  defaultImg.classList.add('inventorydefaultimg')
 }

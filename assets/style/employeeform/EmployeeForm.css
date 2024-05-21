@@ -67,7 +67,7 @@
     display: none;
   }
 
-  #image-preview>.employeedefaultimg,#inventory-image-preview>img:nth-child(2){
+  #image-preview>.employeedefaultimg,#inventory-image-preview>.inventorydefaultimg{
     width: 60px;
   }
 

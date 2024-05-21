@@ -566,9 +566,9 @@
                             <div class="firstcontainerfirstpart">
                                 <div id="inventory-image-preview">
                                     <img src="" alt="">
-                                    <img src="assets/img/EmployeeForm/imageupload.png" alt="">
+                                    <img class="inventorydefaultimg" src="assets/img/EmployeeForm/imageupload.png" alt="">
                                 </div>
-                                <input type="file" id="inventory-file-input" accept="image/*">
+                                <input type="file" class="inventoryimage" id="inventory-file-input" accept="image/*">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Buy Price</label>
                                     <input type="email" class="form-control inputfont inventorybuyprice" id="exampleFormControlInput1" placeholder="Enter Sale Price">
@@ -599,9 +599,9 @@
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Status</label>
                                     <select class="form-select inputfont inventorystatus" aria-label="Default select example">
                                         <option class="selectedfont" selected>Select Status</option>
-                                        <option class="selectedfont" value="1">AVAILABLE</option>
-                                        <option class="selectedfont" value="2">LOW</option>
-                                        <option class="selectedfont" value="3">NOT AVAILABLE</option>
+                                        <option class="selectedfont" value="1">Available</option>
+                                        <option class="selectedfont" value="2">Low</option>
+                                        <option class="selectedfont" value="3">Not</option>
                                     </select>
                                 </div>
                             </div>
@@ -1032,19 +1032,19 @@
                             <div class="firstcontainerfirstpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Item Code</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <input type="email" class="form-control inputfont saleitemcode" id="exampleFormControlInput1" placeholder="Enter Code">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Item Description</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Item Desc">
+                                    <input type="text" class="form-control inputfont saleitemdescription" id="exampleFormControlInput1" placeholder="Enter Item Desc">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Item QTY</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Item QTY">
+                                    <input type="text" class="form-control inputfont saleitemqty" id="exampleFormControlInput1" placeholder="Enter Item QTY">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Payement Method</label>
-                                    <select class="form-select inputfont" aria-label="Default select example">
+                                    <select class="form-select inputfont salepayementmethod" aria-label="Default select example">
                                         <option class="selectedfont" selected>Select Method</option>
                                         <option class="selectedfont" value="1">CASH</option>
                                         <option class="selectedfont" value="2">CARD</option>
@@ -1054,53 +1054,53 @@
                             <div class="firstcontainersecondpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Order No</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Order No">
+                                    <input type="email" class="form-control inputfont saleorderno" id="exampleFormControlInput1" placeholder="Enter Order No">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Size">
+                                    <input type="text" class="form-control inputfont saleitemsize" id="exampleFormControlInput1" placeholder="Enter Size">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Total Price</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Total Price">
+                                    <input type="text" class="form-control inputfont saletotalprice" id="exampleFormControlInput1" placeholder="Enter Total Price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Added Points</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Added Points">
+                                    <input type="text" class="form-control inputfont salepoints" id="exampleFormControlInput1" placeholder="Enter Added Points">
                                 </div>
                             </div>
                             <div class="firstcontainerthirdpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Customer Name</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Customer Name">
+                                    <input type="email" class="form-control inputfont salecustomername" id="exampleFormControlInput1" placeholder="Enter Customer Name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Unit Price</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Unit Price">
+                                    <input type="email" class="form-control inputfont saleunitprice" id="exampleFormControlInput1" placeholder="Enter Unit Price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Purchase Date</label>
-                                    <input type="date" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Purchase Date">
+                                    <input type="date" class="form-control inputfont salepurchasedate" id="exampleFormControlInput1" placeholder="Enter Purchase Date">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Cashier Name</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Cashier Name">
+                                    <input type="text" class="form-control inputfont salecashiername" id="exampleFormControlInput1" placeholder="Enter Cashier Name">
                                 </div>
                             </div>
                         </div>
                         <div class="col-7 d-flex flex-wrap align-items-center justify-content-between salesdetailsforthcontainer">
-                            <button type="button" class="btn btn-outline-primary">Save</button>
-                            <button type="button" class="btn btn-outline-secondary">Update</button>
-                            <button type="button" class="btn btn-outline-success">Delete</button>
-                            <button type="button" class="btn btn-outline-danger">Get</button>
-                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                            <button type="button" class="btn btn-outline-primary saledatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary saledataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success saledatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger saledataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning salealldataget">Get All</button>
                         </div>
                         <div class="col-12 d-flex flex-wrap justify-content-center salesdetailsfifthcontainer">
                             <div class="col-11">
                                 <div>
                                     <h4>Sales Details</h4>
                                 </div>
-                                <table class="table">
+                                <table class="table saletable">
                                     <thead>
                                       <tr>
                                         <th scope="col">Code</th>
@@ -1352,5 +1352,6 @@
     <script src="ajax/employee/Employee.js"></script>
     <script src="ajax/supplier/Supplier.js"></script>
     <script src="ajax/user/User.js"></script>
+    <script src="ajax/inventory/Inventory.js"></script>
 </body>
 </html>
