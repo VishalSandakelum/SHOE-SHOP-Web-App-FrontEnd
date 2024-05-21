@@ -1,5 +1,26 @@
 let salesURI = 'http://localhost:8080/app/api/v0/sales'
 
+$('.saledatasave').click(function(){
+    const saleData = getAllSaleDataFromField();
+    $.ajax({
+        url:salesURI,
+        method:'POST',
+        data:JSON.stringify(saleData),
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            showAlert("success","Success","Sale Saved Sucessfully.");
+            clearAllSaleField();
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge)
+        }
+    });
+});
+
 $('.salealldataget').click(function(){
     $.ajax({
         url:salesURI,
@@ -53,3 +74,17 @@ $('.salealldataget').click(function(){
         }
     });
 });
+
+function getAllSaleDataFromField(){
+    getChooseAllItem();
+    return{
+        inventory:tableData,
+        orderNo: $('.saleorderno').val(),
+        customerName: $('.salecustomername').val(),
+        totalPrice: $('.saletotalprice').val(),
+        purchaseDate: $('.salepurchasedate').val(),
+        paymentMethod: $('.salepayementmethod').find('option:selected').text(),
+        addedPoints: $('.salepoints').val(),
+        cashierName: $('.salecashiername').val()        
+    }
+}

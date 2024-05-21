@@ -66,3 +66,10 @@
 .inventoryaddpopupformbtncontainer{
     margin-top: 45px;
 }
+
+.saleitemrowremove{
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    background-color: transparent;
+}
