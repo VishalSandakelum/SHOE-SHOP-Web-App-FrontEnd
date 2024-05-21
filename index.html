@@ -571,42 +571,33 @@
                                 <input type="file" id="inventory-file-input" accept="image/*">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Buy Price</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                    <input type="email" class="form-control inputfont inventorybuyprice" id="exampleFormControlInput1" placeholder="Enter Sale Price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Sale Price</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Sale Price">
+                                    <input type="email" class="form-control inputfont inventorysaleprice" id="exampleFormControlInput1" placeholder="Enter Sale Price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Profit Margin</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Profit Margin">
+                                    <input type="email" class="form-control inputfont inventoryprofitmargin" id="exampleFormControlInput1" placeholder="Enter Profit Margin">
                                 </div>
                             </div>
                             <div class="firstcontainersecondpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Code</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Code">
+                                    <input type="email" class="form-control inputfont inventorycode" id="exampleFormControlInput1" placeholder="Enter Code">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Inventory Description</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
-                                    <select class="form-select inputfont" aria-label="Default select example">
-                                        <option class="selectedfont" selected>Select Category</option>
-                                        <option class="selectedfont" value="1">MALE</option>
-                                        <option class="selectedfont" value="2">FEMALE</option>
-                                        <option class="selectedfont" value="3">OTHER</option>
-                                    </select>
+                                    <input type="email" class="form-control inputfont inventorydescription" id="exampleFormControlInput1" placeholder="Enter Name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Quantity</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Quantity">
+                                    <input type="email" class="form-control inputfont inventoryquantity" id="exampleFormControlInput1" placeholder="Enter Quantity">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Status</label>
-                                    <select class="form-select inputfont" aria-label="Default select example">
+                                    <select class="form-select inputfont inventorystatus" aria-label="Default select example">
                                         <option class="selectedfont" selected>Select Status</option>
                                         <option class="selectedfont" value="1">AVAILABLE</option>
                                         <option class="selectedfont" value="2">LOW</option>
@@ -617,35 +608,35 @@
                             <div class="firstcontainerthirdpart">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Size</label>
-                                    <input type="email" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Size">
+                                    <input type="email" class="form-control inputfont inventorysize" id="exampleFormControlInput1" placeholder="Enter Size">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Code</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Supplier Code">
+                                    <input type="text" class="form-control inputfont inventorysuppliercode" id="exampleFormControlInput1" placeholder="Enter Supplier Code">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Supplier Name</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Supplier Name">
+                                    <input type="text" class="form-control inputfont inventorysuppliername" id="exampleFormControlInput1" placeholder="Enter Supplier Name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label labelfont">Expected Profit</label>
-                                    <input type="text" class="form-control inputfont" id="exampleFormControlInput1" placeholder="Enter Expected Profit">
+                                    <input type="text" class="form-control inputfont inventoryexpectedprofit" id="exampleFormControlInput1" placeholder="Enter Expected Profit">
                                 </div>
                             </div>
                         </div>
                         <div class="col-7 d-flex flex-wrap align-items-center justify-content-between inventorydetailsforthcontainer">
-                            <button type="button" class="btn btn-outline-primary">Save</button>
-                            <button type="button" class="btn btn-outline-secondary">Update</button>
-                            <button type="button" class="btn btn-outline-success">Delete</button>
-                            <button type="button" class="btn btn-outline-danger">Get</button>
-                            <button type="button" class="btn btn-outline-warning">Get All</button>
+                            <button type="button" class="btn btn-outline-primary inventorydatasave">Save</button>
+                            <button type="button" class="btn btn-outline-secondary inventorydataupdate">Update</button>
+                            <button type="button" class="btn btn-outline-success inventorydatadelete">Delete</button>
+                            <button type="button" class="btn btn-outline-danger inventorydataget">Get</button>
+                            <button type="button" class="btn btn-outline-warning inventoryalldataget">Get All</button>
                         </div>
                         <div class="col-12 d-flex flex-wrap justify-content-center inventorydetailsfifthcontainer">
                             <div class="col-11">
                                 <div>
                                     <h4>Inventory Details</h4>
                                 </div>
-                                <table class="table">
+                                <table class="table inventorytable">
                                     <thead>
                                       <tr>
                                         <th scope="col">Code</th>
@@ -1279,7 +1270,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center inventoryformpopupmaincontainer">
+        <div class="col-12 d-flex flex-wrap justify-content-center align-items-center inventoryformpopupmaincontainer" style="display: none !important;">
             <div class="col-5 d-flex flex-wrap justify-content-center">
                 <div class="col-12 inventorypopupformheader d-flex align-items-center justify-content-end">
                     <button class="inventorypopupformclosebtn">
@@ -1290,42 +1281,57 @@
                     <div class="firstcontainerfirstpart">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label labelfont">Occasion</label>
-                            <select class="form-select inputfont userrole" aria-label="Default select example">
+                            <select class="form-select inputfont occasion" aria-label="Default select example">
                                 <option class="selectedfont" selected>Select Occasion</option>
                                 <option class="selectedfont" value="1">FORMAL</option>
                                 <option class="selectedfont" value="2">CASUAL</option>
-                                <option class="selectedfont" value="1">INDUSTRIAL</option>
-                                <option class="selectedfont" value="2">SPORT</option>
+                                <option class="selectedfont" value="3">INDUSTRIAL</option>
+                                <option class="selectedfont" value="4">SPORT</option>
                             </select>
                         </div>
                     </div>
                     <div class="firstcontainersecondpart">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
-                            <select class="form-select inputfont userrole" aria-label="Default select example">
+                            <select class="form-select inputfont shoeverities" aria-label="Default select example">
                                 <option class="selectedfont" selected>Select Verities</option>
                                 <option class="selectedfont" value="1">HEEL</option>
                                 <option class="selectedfont" value="2">FLATS</option>
-                                <option class="selectedfont" value="1">WEDGES</option>
-                                <option class="selectedfont" value="2">FLIP FLOPS</option>
-                                <option class="selectedfont" value="2">SANDALS</option>
-                                <option class="selectedfont" value="1">SHOES</option>
-                                <option class="selectedfont" value="2">SLIPPERS</option>
+                                <option class="selectedfont" value="3">WEDGES</option>
+                                <option class="selectedfont" value="4">FLIP FLOPS</option>
+                                <option class="selectedfont" value="5">SANDALS</option>
+                                <option class="selectedfont" value="6">SHOES</option>
+                                <option class="selectedfont" value="7">SLIPPERS</option>
                             </select>
                         </div>
                     </div>
                     <div class="firstcontainerthirdpart">
                         <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label labelfont">Category</label>
+                            <select class="form-select inputfont inventorycategory" aria-label="Default select example">
+                                <option class="selectedfont" selected>Select Category</option>
+                                <option class="selectedfont" value="1">MALE</option>
+                                <option class="selectedfont" value="2">FEMALE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="firstcontainerforthdpart">
+                        <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label labelfont">Verities</label>
-                            <select class="form-select inputfont userrole" aria-label="Default select example">
+                            <select class="form-select inputfont otherverities" aria-label="Default select example">
                                 <option class="selectedfont" selected>Select Verities</option>
                                 <option class="selectedfont" value="1">SHOE SHAMPOO</option>
                                 <option class="selectedfont" value="2">POLISH BLACK</option>
-                                <option class="selectedfont" value="1">POLISH BROWN</option>
-                                <option class="selectedfont" value="2">POLISH DARK BROWN</option>
-                                <option class="selectedfont" value="1">FULL-SOCKS</option>
-                                <option class="selectedfont" value="2">HALF-SOCKS</option>
+                                <option class="selectedfont" value="3">POLISH BROWN</option>
+                                <option class="selectedfont" value="4">POLISH DARK BROWN</option>
+                                <option class="selectedfont" value="5">FULL-SOCKS</option>
+                                <option class="selectedfont" value="6">HALF-SOCKS</option>
                             </select>
+                        </div>
+                        <div class="mb-3 inventorypopupformbuttoncontainer">
+                            <div class="col-12 d-flex flex-wrap justify-content-end">
+                                <button type="button" class="btn btn-outline-primary inventorypopupbtn">ok</button>
+                            </div>
                         </div>
                     </div>
                 </div>
