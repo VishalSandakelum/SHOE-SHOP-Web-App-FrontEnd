@@ -1,12 +1,11 @@
 let AllSales = [];
-let Sales = {
-    inventory: [
-      {
-        inventory: {
-          itemCode: ''
-        }
-      }
-    ],
+let Sales = {      
+    id: '',      
+    itemCode: '',
+    itemDescription: '',
+    size: '',
+    unitPriceSale: '',
+    quantity: '',
     orderNo: '',
     customerName: '',
     totalPrice: '',
@@ -31,27 +30,23 @@ function clearAllSalesField(){
     $('.salecashiername').val('');
   }
   
-  function dataToSalesTable(inventory){
+  function dataToSalesTable(sale){
     let row = `<tr>
-                  <th scope="row">${inventory.itemCode}</th>
-                  <td>${inventory.itemDescription}</td>
-                  <td>${inventory.category}</td>
-                  <td>${inventory.size}</td>
-                  <td>${inventory.quantity}</td>
-                  <td>${inventory.supplierCode}</td>
-                  <td>${inventory.supplierName}</td>
-                  <td>${inventory.unitPriceSale}</td>
-                  <td>${inventory.unitPriceBuy}</td>
-                  <td>${inventory.expectedProfit}</td>
-                  <td>${inventory.profitMargin}</td>
-                  <td>
-                    <div class="d-flex justify-content-center Istatus" style="background-color: ${backgroundc}; color: ${fcolor};">
-                      <h4>${inventory.status}</h4>
-                    </div>
-                  </td>
+                <th scope="row">${sale.itemCode}</th>
+                <td>${sale.orderNo}</td>
+                <td>${sale.customerName}</td>
+                <td>${sale.itemDescription}</td>
+                <td>${sale.size}</td>
+                <td>${sale.unitPriceSale}</td>
+                <td>${sale.quantity}</td>
+                <td>${sale.totalPrice}</td>
+                <td>${sale.purchaseDate}</td>
+                <td>${sale.paymentMethod}</td>
+                <td>${sale.addedPoints}</td>
+                <td>${sale.cashierName}</td>
               </tr>`;
   
-    $(".inventorytable").append(row);
+    $(".saletable").append(row);
   }
 
   $('.inventoryaddpopupformclosebtn').click(function(){
@@ -60,4 +55,14 @@ function clearAllSalesField(){
 
   $('.saleitmadd').click(function(){
     $('.inventoryaddpopupform').attr('style', 'display: block');
+    $('.saledetailstablecontainer').attr('style', 'display: none');
+    $('.saleitemquetablecontainer').attr('style', 'display: block');
+  });
+
+  $('.saleinventoryaddfieldclear').click(function(){
+    $('.saleitemcode').val('');
+    $('.saleitemqty').val('');
+    $('.saleunitprice').val('');
+    $('.saleitemdescription').val('');
+    $('.saleitemsize').val('');
   });
