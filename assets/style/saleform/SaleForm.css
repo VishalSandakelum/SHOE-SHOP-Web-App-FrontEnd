@@ -1,12 +1,12 @@
 .salesdetailsmaincontainer{
     position: relative;
     width: 97%;
-    height: 850px;
+    height: 750px;
     margin-bottom: 200px;
 }
 
 .salesdetailsfirstcontainer{
-    height: 400px;
+    height: 300px;
 }
 
 .salesdetailsfifthcontainer>div>div:nth-child(1){

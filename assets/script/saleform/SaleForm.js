@@ -57,3 +57,7 @@ function clearAllSalesField(){
   $('.inventoryaddpopupformclosebtn').click(function(){
     $('.inventoryaddpopupform').attr('style', 'display: none !important');
   });
+
+  $('.saleitmadd').click(function(){
+    $('.inventoryaddpopupform').attr('style', 'display: block');
+  });
