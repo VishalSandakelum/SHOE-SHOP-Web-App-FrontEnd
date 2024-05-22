@@ -41,7 +41,7 @@
     width: calc(95%/2);
 }
 
-.saleinventoryaddsave{
+.saleinventoryaddsave,.saleinventoryaddupdate{
     font-family: "Dongle", cursive;
     font-size: 25px !important;
     width: 200px;
@@ -65,6 +65,7 @@
 
 .inventoryaddpopupformbtncontainer{
     margin-top: 45px;
+    width: 500px;
 }
 
 .saleitemrowremove{
