@@ -1,6 +1,24 @@
 let employeeURI = 'http://localhost:8080/app/api/v0/employees'
 let employeeFormData = new FormData();
 
+getNextEmployeeID();
+
+function getNextEmployeeID(){
+    $.ajax({
+        url:employeeURI+'/nextid',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            $('.employeecode').val(resp)
+        }
+    });
+}
+
 $('.employeedatasave').click(function(){
     let employeeData = JSON.stringify(getAllEmployeeDataFromField());
     employeeFormData.append('data', new Blob([employeeData], { type: 'application/json' }));
@@ -21,6 +39,7 @@ $('.employeedatasave').click(function(){
         success: function(resp){
             showAlert("success","Success","Employee "+resp.employeeCode+" Saved Sucessfully.");
             clearAllEmployeeField();
+            getNextEmployeeID();
         },
         error:function(resp){
         }
@@ -40,7 +59,7 @@ $('.employeedataget').click(function(){
             clearAllEmployeeField();
             $('.employeecode').val(resp.employeeCode)
             $('.employeename').val(resp.employeeName),
-            //setReponseEmployeeImage(resp.employeeProfilePic)
+            setReponseEmployeeImage(resp.employeeProfilePic)
             $('.employeegender option').each(function() {
                 if ($(this).text() === resp.gender) {
                     $(this).prop('selected', true);
@@ -68,7 +87,7 @@ $('.employeedataget').click(function(){
         },
         error:function(resp){
             showAlert("error","Oops",resp.message);
-            clearAllCustomerField();
+            clearAllEmployeeField();
         }
     });
 });
@@ -93,6 +112,7 @@ $('.employeedataupdate').click(function(){
         success: function(resp){
             showAlert("success","Success","Employee "+$('.employeecode').val()+" Updated Sucessfully.");
             clearAllEmployeeField();
+            getNextEmployeeID();
         },
         error:function(resp){
             showAlert("warning","Oops","Invalid Data.")
@@ -112,6 +132,7 @@ $('.employeedatadelete').click(function(){
         success: function(resp){
             showAlert("success","Success","Employee "+$('.employeecode').val()+" Delete Sucessfully.");
             clearAllEmployeeField();
+            getNextEmployeeID();
         },
         error:function(resp){
             showAlert("error","Oops","This Employee "+$('.employeecode').val()+" Not Found.");

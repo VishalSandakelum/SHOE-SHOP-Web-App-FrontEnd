@@ -45,10 +45,11 @@ $('.inventorydataget').click(function(){
                     $(this).prop('selected', true);
                 }
             }),
+            setReponseInventoryImage(resp.itemPicture)
             $('.inventorysize').val(resp.size),
             $('.inventorysuppliercode').val(resp.supplierCode),
-            $('.inventorysuppliername').val(formatDate(resp.supplierName)),
-            $('.inventorysaleprice').val(formatDate(resp.unitPriceSale)),
+            $('.inventorysuppliername').val(resp.supplierName),
+            $('.inventorysaleprice').val(resp.unitPriceSale),
             $('.inventorybuyprice').val(resp.unitPriceBuy),
             $('.inventoryexpectedprofit').val(resp.expectedProfit),
             $('.inventoryprofitmargin').val(resp.profitMargin),

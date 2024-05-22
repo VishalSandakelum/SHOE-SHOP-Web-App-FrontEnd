@@ -209,6 +209,14 @@ function findInventoryCategory(){
   }
 }
 
+function setReponseInventoryImage(image){
+  const img = document.createElement('img');
+  const profilepic = 'data:image/jpg;base64,' + image;
+  inventoryimagePreview.innerHTML = '';
+  img.src = profilepic;
+  inventoryimagePreview.appendChild(img);
+}
+
 function inventoryImageToDefault(){
   const defaultImg = document.createElement('img');
   defaultImg.src = 'assets/img/EmployeeForm/imageupload.png';
