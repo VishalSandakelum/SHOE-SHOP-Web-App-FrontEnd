@@ -1,5 +1,23 @@
 let customerURI = 'http://localhost:8080/app/api/v0/customers'
 
+getNextCustomerCode();
+
+function getNextCustomerCode(){
+    $.ajax({
+        url:customerURI+'/nextid',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            $('.customercode').val(resp)
+        }
+    });
+}
+
 $('.customerdatasave').click(function(){
     console.log(getAllCustomerDataFromField);
     const customerData = getAllCustomerDataFromField();
