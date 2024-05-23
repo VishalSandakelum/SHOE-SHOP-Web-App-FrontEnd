@@ -1,6 +1,5 @@
 const inventoryfileInput = document.getElementById('inventory-file-input');
 const inventoryimagePreview = document.getElementById('inventory-image-preview');
-$('.inventorycode').attr('readonly', true);
 let selected = [];
 let AllInventory = [];
 let Inventory = {
@@ -42,7 +41,8 @@ inventoryimagePreview.addEventListener('click', function() {
     inventoryfileInput.click();
 });
 
-$('.inventorycode').click(function(){
+$('.inventorycode').dblclick(function(){
+  $('.inventorycode').attr('readonly', true);
   $('.inventoryformpopupmaincontainer').attr('style', 'display: block');
 });
 
@@ -223,4 +223,34 @@ function inventoryImageToDefault(){
   inventoryimagePreview.innerHTML = '';
   inventoryimagePreview.appendChild(defaultImg);
   defaultImg.classList.add('inventorydefaultimg')
+}
+
+function inventoryBase64FileToNormalFile(imgElement){
+  if (imgElement) {
+    let base64String = imgElement.src;
+
+    function base64ToBlob(base64, mimeType) {
+        let byteString = atob(base64.split(',')[1]);
+        let arrayBuffer = new ArrayBuffer(byteString.length);
+        let uint8Array = new Uint8Array(arrayBuffer);
+        for (let i = 0; i < byteString.length; i++) {
+            uint8Array[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([uint8Array], { type: mimeType });
+    }
+
+    let mimeType = base64String.match(/data:(.*);base64,/)[1];
+    let blob = base64ToBlob(base64String, mimeType);
+
+    let file = new File([blob], 'image.png', { type: mimeType });
+    let dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+    let inventoryfileInput = $('#inventory-file-input')[0];
+    inventoryfileInput.files = dataTransfer.files;
+    console.log(inventoryfileInput.files); 
+
+    return dataTransfer.files;
+  } else {
+    console.log('Image element not found');
+  }
 }

@@ -20,6 +20,7 @@ function getNextEmployeeID(){
 }
 
 $('.employeedatasave').click(function(){
+    employeeFormData = new FormData();
     let employeeData = JSON.stringify(getAllEmployeeDataFromField());
     employeeFormData.append('data', new Blob([employeeData], { type: 'application/json' }));
     let employeefileInput = $('.employeeimage')[0];
@@ -93,6 +94,7 @@ $('.employeedataget').click(function(){
 });
 
 $('.employeedataupdate').click(function(){
+    employeeFormData = new FormData();
     let employeeData = JSON.stringify(getAllEmployeeDataFromField());
     employeeFormData.append('data', new Blob([employeeData], { type: 'application/json' }));
     let employeefileInput = $('.employeeimage')[0];

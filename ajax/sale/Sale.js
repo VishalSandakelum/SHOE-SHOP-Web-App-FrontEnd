@@ -1,5 +1,23 @@
 let salesURI = 'http://localhost:8080/app/api/v0/sales'
 
+getNextOrderCode();
+
+function getNextOrderCode(){
+    $.ajax({
+        url:salesURI+'/nextordercode',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            $('.saleorderno').val(resp)
+        }
+    });
+}
+
 $('.saledatasave').click(function(){
     const saleData = getAllSaleDataFromField();
     $.ajax({

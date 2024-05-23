@@ -2,12 +2,16 @@ let inventoryURI = 'http://localhost:8080/app/api/v0/inventory'
 let inventoryFormData = new FormData();
 
 $('.inventorydatasave').click(function(){
+    inventoryFormData = new FormData();
     let inventoryData = JSON.stringify(getAllInventoryDataFromField());
+    console.log(inventoryData);
     inventoryFormData.append('data', new Blob([inventoryData], { type: 'application/json' }));
     let inventoryfileInput = $('.inventoryimage')[0];
     if (inventoryfileInput.files.length > 0) {
         inventoryFormData.append('itempic', inventoryfileInput.files[0]);
     }
+
+    console.log(inventoryFormData);
     $.ajax({
         url:inventoryURI,
         method:'POST',
@@ -21,6 +25,7 @@ $('.inventorydatasave').click(function(){
         success: function(resp){
             showAlert("success","Success","Inventory "+resp.itemCode+" Saved Sucessfully.");
             clearAllInventoryField();
+            $('.inventorycode').attr('readonly', false);
         },
         error:function(resp){
         }
@@ -68,10 +73,15 @@ $('.inventorydataget').click(function(){
 });
 
 $('.inventorydataupdate').click(function(){
+    inventoryFormData = new FormData();
     let inventoryData = JSON.stringify(getAllInventoryDataFromField());
     inventoryFormData.append('data', new Blob([inventoryData], { type: 'application/json' }));
     let inventoryfileInput = $('.inventoryimage')[0];
     if (inventoryfileInput.files.length > 0) {
+        inventoryFormData.append('itempic', inventoryfileInput.files[0]);
+    }else{
+        let imgElement = $('#inventory-image-preview>img')[0];
+        inventoryfileInput.files = inventoryBase64FileToNormalFile(imgElement);
         inventoryFormData.append('itempic', inventoryfileInput.files[0]);
     }
     $.ajax({
@@ -176,6 +186,7 @@ function getAllInventoryDataFromField(){
         expectedProfit: $('.inventoryexpectedprofit').val(),
         profitMargin: $('.inventoryprofitmargin').val(),
         status: $('.inventorystatus').find('option:selected').text(),
-        quantity: $('.inventoryquantity').val()
+        quantity: $('.inventoryquantity').val(),
+        pquantity: $('.inventoryquantity').val()
     }
 }
