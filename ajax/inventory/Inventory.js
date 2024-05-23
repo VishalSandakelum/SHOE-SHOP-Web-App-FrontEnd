@@ -81,7 +81,7 @@ $('.inventorydataupdate').click(function(){
         inventoryFormData.append('itempic', inventoryfileInput.files[0]);
     }else{
         let imgElement = $('#inventory-image-preview>img')[0];
-        inventoryfileInput.files = inventoryBase64FileToNormalFile(imgElement);
+        inventoryfileInput.files = Base64FileToNormalFile(imgElement);
         inventoryFormData.append('itempic', inventoryfileInput.files[0]);
     }
     $.ajax({

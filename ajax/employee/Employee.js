@@ -100,6 +100,10 @@ $('.employeedataupdate').click(function(){
     let employeefileInput = $('.employeeimage')[0];
     if (employeefileInput.files.length > 0) {
         employeeFormData.append('profilepic', employeefileInput.files[0]);
+    }else{
+        let employeeimgElement = $('#image-preview>img')[0];
+        employeefileInput.files = Base64FileToNormalFile(employeeimgElement);
+        employeeFormData.append('profilepic', employeefileInput.files[0]);
     }
     $.ajax({
         url:(employeeURI),
