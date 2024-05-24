@@ -1,5 +1,23 @@
 let supplierURI = 'http://localhost:8080/app/api/v0/suppliers'
 
+getNextSupplierCode();
+
+function getNextSupplierCode(){
+    $.ajax({
+        url:supplierURI+'/nextid',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            $('.suppliercode').val(resp)
+        }
+    });
+}
+
 $('.supplierdatasave').click(function(){
     const supplierData = getAllSupplierDataFromField();
     $.ajax({
