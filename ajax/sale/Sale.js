@@ -201,6 +201,29 @@ $('.saledatadelete').click(function(){
     });
 });
 
+$('.saleitemcode').on('keypress', function(event){
+    if (event.which === 13) {
+        event.preventDefault();
+        $.ajax({
+            url:(inventoryURI+'/'+$('.saleitemcode').val()),
+            method:'PATCH',
+            contentType: 'application/json',
+            headers: {
+                'Authorization': 'Bearer ' + bearerToken
+            },
+        
+            success: function(resp){
+                $('.saleitemdescription').val(resp.itemDescription),
+                $('.saleitemsize').val(resp.size),
+                $('.saleunitprice').val(resp.unitPriceSale)
+            },
+            error:function(resp){
+                showAlert("error","Oops",resp.message);
+            }
+        });
+    }
+});
+
 function getAllSaleDataFromField(){
     getChooseAllItem();
     return{

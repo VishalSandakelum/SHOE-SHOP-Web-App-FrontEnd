@@ -97,6 +97,7 @@ function clearAllSalesField(){
         quantity:$('.saleitemqty').val(),
         size:$('.saleitemsize').val()
     }
+    createTotal($('.saleitemqty').val(),$('.saleunitprice').val());
     clearSaleInventoryAddField();
     dataToSalesItemQueTable(addItem)
   });
@@ -217,4 +218,18 @@ function clearAllSalesField(){
     }
   }
   console.log(tableData);
+  }
+
+  function createTotal(quantity,unitsaleprice){
+    if($('.saletotalprice').val()==""){
+      console.log(quantity+','+unitsaleprice);
+      $('.saletotalprice').val(quantity*unitsaleprice);
+    }else{
+      console.log('ss');
+      let alreadyTot = parseInt($('.saletotalprice').val());
+      let newTot = quantity*unitsaleprice;
+
+      $('.saletotalprice').val();
+      $('.saletotalprice').val(alreadyTot+newTot);
+    }
   }
