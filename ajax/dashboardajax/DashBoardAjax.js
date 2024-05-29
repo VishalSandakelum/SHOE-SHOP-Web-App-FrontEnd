@@ -1,6 +1,7 @@
 const employeeContainer = document.querySelector('.employeecontainer');
 getMostSaleInvetorysInDashBoard();
 findAllEmployeesOrderByDob();
+getAllRecentSales();
 
 function getMostSaleInvetorysInDashBoard(){
     $.ajax({
@@ -41,6 +42,62 @@ function findAllEmployeesOrderByDob(){
             console.log(isDateToday(resp[i].dob));
             addEmployeeDetails(resp[i].employeeName,resp[i].employeeCode,formatDate(resp[i].dob),resp[i].employeeProfilePic);
            }
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+}
+
+function getAllRecentSales(){
+    $.ajax({
+        url:salesURI,
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            $('.recenetsaletable td').parent().remove();
+            for(var i in resp){
+                for(var x in resp[i].inventory){
+                    if(isDateToday(formatDate(resp[i].purchaseDate))){
+                        let id = resp[i].inventory[x].id;
+                        let itemCode = resp[i].inventory[x].inventory.itemCode;
+                        let itemDescription = resp[i].inventory[x].itemDescription;
+                        let size = resp[i].inventory[x].size;
+                        let unitPriceSale = resp[i].inventory[x].unitPriceSale;
+                        let quantity = resp[i].inventory[x].quantity;
+                        let orderNo = resp[i].orderNo;
+                        let customerName = resp[i].customerName;
+                        let totalPrice = resp[i].totalPrice;
+                        let purchaseDate = resp[i].purchaseDate;
+                        let paymentMethod = resp[i].paymentMethod;
+                        let addedPoints = resp[i].addedPoints;
+                        let cashierName = resp[i].cashierName;
+                        console.log(dateToNormalDate(purchaseDate));
+
+                        let sale = Object.assign({},Sales);
+                        sale.id = id;
+                        sale.itemCode = itemCode;
+                        sale.itemDescription = itemDescription;
+                        sale.size = size;
+                        sale.unitPriceSale = unitPriceSale;
+                        sale.quantity = quantity;
+                        sale.orderNo = orderNo;
+                        sale.customerName = customerName;
+                        sale.totalPrice = totalPrice;
+                        sale.purchaseDate = dateToNormalDate(purchaseDate);
+                        sale.paymentMethod = paymentMethod;
+                        sale.addedPoints = addedPoints;
+                        sale.cashierName = cashierName;
+
+                        dataToRecentSaleDetailsTable(sale);
+                    }
+                }
+            }
         },
         error:function(resp){
             showAlert("error","Oops",resp.mesasge);

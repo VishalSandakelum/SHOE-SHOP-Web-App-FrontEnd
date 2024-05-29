@@ -523,3 +523,8 @@ header{
     font-weight: 550;
     height: 10px;
 }
+
+.barchartcontainer{
+    position: relative;
+    height: 70%;
+}
