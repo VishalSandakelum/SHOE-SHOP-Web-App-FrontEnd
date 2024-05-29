@@ -5,6 +5,7 @@ findAllEmployeesOrderByDob();
 getAllRecentSales();
 getWeeklyProfit();
 createNotification();
+getMonthlyRevenue();
 var weeklyProfit = {
     date: '',
     profit: '',
@@ -170,6 +171,24 @@ function createNotification(){
                     dataToNotificationConatiner(formattedTime,resp[i].itemDescription+" "+"is Not");
                 }
             }
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+}
+
+function getMonthlyRevenue(){
+    $.ajax({
+        url:salesURI+"/monthlyprofit",
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            $('.monthlyrevenue').text(resp);
         },
         error:function(resp){
             showAlert("error","Oops",resp.mesasge);
