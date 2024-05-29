@@ -1,8 +1,10 @@
 const employeeContainer = document.querySelector('.employeecontainer');
+const notificationContainer = document.querySelector('.notificationcontainerbody');
 getMostSaleInvetorysInDashBoard();
 findAllEmployeesOrderByDob();
 getAllRecentSales();
 getWeeklyProfit();
+createNotification();
 var weeklyProfit = {
     date: '',
     profit: '',
@@ -138,6 +140,36 @@ function getWeeklyProfit(){
             }
             dataAddToChart(weekDates)
             console.log(weekDates);
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+}
+
+function createNotification(){
+    $.ajax({
+        url:inventoryURI,
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            notificationContainer.innerHTML = '';
+            for(var i in resp){
+                if(resp[i].status=="Low"){
+                    console.log('low');
+                    var now = new Date();
+                    var formattedTime = formatTime(now);
+                    dataToNotificationConatiner(formattedTime,resp[i].itemDescription+" "+"is lower Lavel");
+                }else if(resp[i].status=="Not"){
+                    var now = new Date();
+                    var formattedTime = formatTime(now);
+                    dataToNotificationConatiner(formattedTime,resp[i].itemDescription+" "+"is Not");
+                }
+            }
         },
         error:function(resp){
             showAlert("error","Oops",resp.mesasge);

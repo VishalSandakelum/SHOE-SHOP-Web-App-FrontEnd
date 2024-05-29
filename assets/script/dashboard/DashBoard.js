@@ -333,3 +333,55 @@ function getWeekDates() {
 
     return weekDates;
 }
+
+$('.notificationcontainerclosebtn').click(function(){
+    $('.notificationmaincontainer').attr('style', 'display: none !important');
+});
+
+$('.notificationclosebtn').click(function(){
+    $(this).closest('.messageconatiner').attr('style', 'display: none !important');
+});
+
+$('.notification').click(function(){
+    $('.notificationmaincontainer').attr('style', 'display: block')
+});
+
+function dataToNotificationConatiner(time , message){
+    let messagedeconatiner = `
+        <div class="col-9 d-flex flex-wrap messageconatiner" style="margin-top: 15px;">
+            <div class="col-12 d-flex flex-wrap justify-content-between messagetittle">
+                <div class="d-flex flex-wrap messagetitleleftside">
+                    <img src="assets/img/LoginForm/logoicon.png" alt="">
+                    <h4>Message</h4>
+                </div>
+                <div class="d-flex flex-wrap messagetitlerightside">
+                    <h4>${time}</h4>
+                    <button class="notificationclosebtn" onclick="closeNotification(this)">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-wrap align-items-center messagebody">
+                <h4>${message}</h4>
+            </div>
+        </div>
+        `;
+        
+        $(".notificationcontainerbody").append(messagedeconatiner);
+}
+
+function closeNotification(button) {
+    $(button).closest('.messageconatiner').attr('style', 'display: none !important');
+}
+
+function formatTime(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var period = hours >= 12 ? 'P.M' : 'A.M';
+    
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    
+    return hours + '.' + minutes + ' ' + period;
+  }

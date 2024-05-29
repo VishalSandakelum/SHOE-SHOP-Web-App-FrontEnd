@@ -554,7 +554,6 @@ header{
 
 .notificationcontainertitle{
     position: absolute;
-    background-color: blue;
     height: 50px;
     top: 5%;
     border-bottom: 1px solid gray;
@@ -576,7 +575,7 @@ header{
 .notificationcontainerbody{
     position: absolute;
     top: 18%;
-    height: 50px;
+    height: fit-content;
 }
 
 .messageconatiner{
@@ -587,7 +586,6 @@ header{
 }
 
 .messagetitleleftside{
-    background-color: red;
     margin-left: 5px;
 }
 
@@ -604,7 +602,6 @@ header{
 
 .messagetitlerightside{
     margin-top: 5px;
-    background-color: blue;
 }
 
 .messagetitlerightside>h4{
@@ -623,7 +620,7 @@ header{
 .messagetitlerightside>button{
     height: 25px;
     border: 0px;
-    background-color: red;
+    background-color: transparent;
     bottom: 25px;
 }
 
@@ -642,4 +639,8 @@ header{
     font-family: "Dongle", cursive;
     font-size: 25px;
     margin-left: 8px;
+}
+
+.notification{
+    cursor: pointer;
 }
