@@ -88,3 +88,68 @@ profileimagePreview.on('click', function() {
 });
 
 /*------------------------------------------------------*/
+
+function setMostSaleShoePicture(image){
+    const shoeimagepreview = document.getElementsByClassName('dashboardmostsaleshoepictures')[0];
+    const shoepic = 'data:image/jpg;base64,' + image;
+    
+    // Set the src attribute of the existing img element
+    shoeimagepreview.src = shoepic;
+}
+
+function dataToMostSaleShoeTable(inventory){
+    let row = `<tr>
+                <th scope="row">${inventory.itemCode}</th>
+                <td>${inventory.itemDescription}</td>
+                <td>${inventory.size}</td>
+                <td>${inventory.quantity}</td>
+                <td>${inventory.unitPriceSale}</td>
+            </tr>`;
+
+  $(".mostsaleshoedetailstable").append(row);
+}
+
+function addEmployeeDetails(name, code, date, imageUrl) {
+    let backgroundc;
+    let fcolor;
+    let newwidth;
+    let Today = isDateToday(date);
+    if(isDateToday(date)){
+        backgroundc = 'rgba(65, 254, 65, 0.208)';
+        fcolor = 'rgb(0, 166, 0)';
+    }else{
+        backgroundc = 'rgba(255, 255, 255, 0)';
+        fcolor = 'rgb(0, 0, 0)';
+        newwidth = '70px'
+    }
+    const employeeContainer = document.querySelector('.employeecontainer');
+
+    let employeeHTML = `
+        <div class="d-flex">
+            <div>
+                <div>
+                    <img src="data:image/png;base64,${imageUrl}" alt="employee">
+                </div>
+                <div class="spaceline"></div>
+            </div>
+            <div class="birthdaydetails">
+                <h4>${name}</h4>
+                <h4>${code}</h4>
+                <div class="d-flex justify-content-center daytoday align-items-center" style="background-color: ${backgroundc}; color: ${fcolor}; width: ${newwidth};">
+                    <h4>${Today ? 'Today' : date}</h4>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Append the HTML to the employee container
+    employeeContainer.insertAdjacentHTML('beforeend', employeeHTML);
+}
+
+function isDateToday(dateString) {
+    const date = new Date(dateString);
+    const today = new Date();
+    
+    return date.getMonth() === today.getMonth() &&
+           date.getDate() === today.getDate();
+}
