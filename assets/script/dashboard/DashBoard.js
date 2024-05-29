@@ -177,114 +177,159 @@ function dateToNormalDate(date){
     return formattedDate;
 }
 
-Chart.plugins.register({
-    afterDatasetDraw: function(chartInstance) {
-      var ctx = chartInstance.chart.ctx;
-      var colors = ["#E0E0E0", "#E0E0E0", "#E0E0E0", "#3498DB", "#E0E0E0", "#E0E0E0", "#E0E0E0"]; // New colors to apply
-  
-      chartInstance.data.datasets.forEach(function(dataset, i) {
-        var meta = chartInstance.getDatasetMeta(i);
-        meta.data.forEach(function(bar, index) {
-          var value = dataset.data[index];
-          var x = bar._model.x;
-          var y = bar._model.y;
-          var base = bar._model.base;
-          var height = Math.abs(base - y);
-          var width = bar._model.width;
-          var radius = 10; // Adjust this value for rounded corners
-  
-          // Ensure the radius is not greater than half the bar's height
-          if (radius > height / 2) {
-            radius = height / 2;
-          }
-  
-          // Ensure the radius is not greater than half the bar's width
-          if (radius > width / 2) {
-            radius = width / 2;
-          }
-  
-          // Save the context state
-          ctx.save();
-  
-          // Draw the rounded rectangle
-          ctx.beginPath();
-          ctx.moveTo(x - width / 2 + radius, base);
-          ctx.lineTo(x + width / 2 - radius, base);
-          ctx.quadraticCurveTo(x + width / 2, base, x + width / 2, base - radius);
-          ctx.lineTo(x + width / 2, y + radius);
-          ctx.quadraticCurveTo(x + width / 2, y, x + width / 2 - radius, y);
-          ctx.lineTo(x - width / 2 + radius, y);
-          ctx.quadraticCurveTo(x - width / 2, y, x - width / 2, y + radius);
-          ctx.lineTo(x - width / 2, base - radius);
-          ctx.quadraticCurveTo(x - width / 2, base, x - width / 2 + radius, base);
-          ctx.closePath();
-  
-          // Fill the bar with the specified color
-          ctx.fillStyle = colors[index]; // Use the corresponding color from the colors array
-          ctx.fill();
-  
-          // Restore the context state
-          ctx.restore();
-        });
+function dataAddToChart(weekdata){
+    var definecolors = [];
+    var definedate = [];
+    var defineprofit = [];
+    for(var i = 0; i < weekdata.length; i++){
+        if (weekdata[i].today){
+            definecolors.push("#3498DB");
+        }else{
+            definecolors.push("#E0E0E0");
+        }
+
+        definedate.push(weekdata[i].date);
+        defineprofit.push(weekdata[i].profit);
+    }
+    Chart.plugins.register({
+        afterDatasetDraw: function(chartInstance) {
+          var ctx = chartInstance.chart.ctx;
+          var colors = definecolors // New colors to apply
+      
+          chartInstance.data.datasets.forEach(function(dataset, i) {
+            var meta = chartInstance.getDatasetMeta(i);
+            meta.data.forEach(function(bar, index) {
+              var value = dataset.data[index];
+              var x = bar._model.x;
+              var y = bar._model.y;
+              var base = bar._model.base;
+              var height = Math.abs(base - y);
+              var width = bar._model.width;
+              var radius = 10; // Adjust this value for rounded corners
+      
+              // Ensure the radius is not greater than half the bar's height
+              if (radius > height / 2) {
+                radius = height / 2;
+              }
+      
+              // Ensure the radius is not greater than half the bar's width
+              if (radius > width / 2) {
+                radius = width / 2;
+              }
+      
+              // Save the context state
+              ctx.save();
+      
+              // Draw the rounded rectangle
+              ctx.beginPath();
+              ctx.moveTo(x - width / 2 + radius, base);
+              ctx.lineTo(x + width / 2 - radius, base);
+              ctx.quadraticCurveTo(x + width / 2, base, x + width / 2, base - radius);
+              ctx.lineTo(x + width / 2, y + radius);
+              ctx.quadraticCurveTo(x + width / 2, y, x + width / 2 - radius, y);
+              ctx.lineTo(x - width / 2 + radius, y);
+              ctx.quadraticCurveTo(x - width / 2, y, x - width / 2, y + radius);
+              ctx.lineTo(x - width / 2, base - radius);
+              ctx.quadraticCurveTo(x - width / 2, base, x - width / 2 + radius, base);
+              ctx.closePath();
+      
+              // Fill the bar with the specified color
+              ctx.fillStyle = colors[index]; // Use the corresponding color from the colors array
+              ctx.fill();
+      
+              // Restore the context state
+              ctx.restore();
+            });
+          });
+        }
       });
-    }
-  });
-  
-  var xValues = ["Italy", "France", "Spain", "USA", "Argentina","USA", "Argentina"];
-  var yValues = [55, 49, 44, 24, 15, 45, 50];
-  var barColors = ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff","#ffffff","#ffffff"]; // Initial black color for all bars
-  
-  new Chart("myChart", {
-    type: "bar",
-    data: {
-      labels: xValues,
-      datasets: [{
-        backgroundColor: barColors, // Set initial color array to black
-        data: yValues,
-        barPercentage: 0.5, // Reduce the bar thickness for a sleeker look
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: { display: false },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            display: false, // Hide the y-axis values
-            padding: 10, // Adds padding to labels
-            fontSize: 14, // Bigger font size for better readability
+      
+      var xValues = definedate;
+      var yValues = defineprofit;
+      var barColors = ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff","#ffffff","#ffffff"]; // Initial black color for all bars
+      
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors, // Set initial color array to black
+            data: yValues,
+            barPercentage: 0.5, // Reduce the bar thickness for a sleeker look
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: { display: false },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                display: false, // Hide the y-axis values
+                padding: 10, // Adds padding to labels
+                fontSize: 14, // Bigger font size for better readability
+              },
+              gridLines: {
+                drawBorder: false, // Removes the border around the grid
+                color: 'rgba(204, 204, 204, 0.1)', // Lighter grid lines
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false, // No grid lines
+              },
+              ticks: {
+                display: false,
+                fontColor: '#888', // Gray color for the x-axis labels
+                fontSize: 14, // Bigger font size for better readability
+              }
+            }]
           },
-          gridLines: {
-            drawBorder: false, // Removes the border around the grid
-            color: 'rgba(204, 204, 204, 0.1)', // Lighter grid lines
+          tooltips: {
+            enabled: true,
+            mode: 'index',
+            intersect: false,
+            backgroundColor: '#373738', // White background for tooltips
+            titleFontColor: '#ffff', // Black text for titles
+            bodyFontColor: '#ffff', // Gray text for body
+            borderColor: '#CCC', // Light gray border for tooltips
+            borderWidth: 1,
+            cornerRadius: 4, // Rounded corners for tooltips
+            caretSize: 6, // Larger caret size
+            xPadding: 10, // Horizontal padding within the tooltip
+            yPadding: 10, // Vertical padding within the tooltip
           }
-        }],
-        xAxes: [{
-          gridLines: {
-            display: false, // No grid lines
-          },
-          ticks: {
-            display: false,
-            fontColor: '#888', // Gray color for the x-axis labels
-            fontSize: 14, // Bigger font size for better readability
-          }
-        }]
-      },
-      tooltips: {
-        enabled: true,
-        mode: 'index',
-        intersect: false,
-        backgroundColor: '#373738', // White background for tooltips
-        titleFontColor: '#ffff', // Black text for titles
-        bodyFontColor: '#ffff', // Gray text for body
-        borderColor: '#CCC', // Light gray border for tooltips
-        borderWidth: 1,
-        cornerRadius: 4, // Rounded corners for tooltips
-        caretSize: 6, // Larger caret size
-        xPadding: 10, // Horizontal padding within the tooltip
-        yPadding: 10, // Vertical padding within the tooltip
-      }
+        }
+      });
+}
+
+  /////////////////////////////////
+
+function getFormattedDate(date) {
+    var year = date.getFullYear();
+    var month = String(date.getMonth() + 1).padStart(2, '0'); // Adding 1 because month is zero-based
+    var day = String(date.getDate()).padStart(2, '0');
+    return year + '-' + month + '-' + day;
+}
+
+function getWeekDates() {
+    var today = new Date();
+    var dayOfWeek = today.getDay(); // 0: Sunday, 1: Monday, ..., 6: Saturday
+    var diff = today.getDate() - dayOfWeek + (dayOfWeek == 0 ? -6 : 1); // Adjust for Sunday
+    var startDate = new Date(today.setDate(diff));
+
+    var weekDates = [];
+
+    for (var i = 0; i < 7; i++) {
+        var currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + i);
+        let week = Object.assign({},weeklyProfit);
+        week.date = getFormattedDate(currentDate);
+        week.profit = 0;
+        week.today = isDateToday(getFormattedDate(currentDate));
+        weekDates.push(week);
     }
-  });
+
+    return weekDates;
+}

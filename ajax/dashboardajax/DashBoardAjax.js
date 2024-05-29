@@ -2,6 +2,12 @@ const employeeContainer = document.querySelector('.employeecontainer');
 getMostSaleInvetorysInDashBoard();
 findAllEmployeesOrderByDob();
 getAllRecentSales();
+getWeeklyProfit();
+var weeklyProfit = {
+    date: '',
+    profit: '',
+    today: ''
+}
 
 function getMostSaleInvetorysInDashBoard(){
     $.ajax({
@@ -98,6 +104,40 @@ function getAllRecentSales(){
                     }
                 }
             }
+        },
+        error:function(resp){
+            showAlert("error","Oops",resp.mesasge);
+        }
+    });
+}
+
+function getWeeklyProfit(){
+    $.ajax({
+        url:salesURI+'/weeklyprofit',
+        method:'GET',
+        contentType: 'application/json',
+        headers: {
+            'Authorization': 'Bearer ' + bearerToken
+        },
+    
+        success: function(resp){
+            console.log(resp);
+            var weekDates = getWeekDates();
+            console.log(weekDates);
+            console.log('////////////////////');
+            for (var date in resp) {
+                if (resp.hasOwnProperty(date)) {
+                    console.log(date + ': ' + resp[date]);
+                    innerLoop:for(var i = 0; i < weekDates.length; i++){
+                        if(weekDates[i].date==date){
+                            weekDates[i].profit = resp[date];
+                            break innerLoop;
+                        }
+                    }
+                }
+            }
+            dataAddToChart(weekDates)
+            console.log(weekDates);
         },
         error:function(resp){
             showAlert("error","Oops",resp.mesasge);
