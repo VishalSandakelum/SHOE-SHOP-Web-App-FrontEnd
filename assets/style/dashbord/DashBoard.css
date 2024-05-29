@@ -528,3 +528,118 @@ header{
     position: relative;
     height: 70%;
 }
+
+.notificationmaincontainer{
+    position: absolute;
+    height: 100vh;
+    background-color: rgba(59, 59, 59, 0.474);
+}
+
+.notificationinnercontainer{
+    position: relative;
+    height: 70vh;
+    overflow: scroll;
+    background-color: #f6f9fe;
+    border-radius: 10px;
+}
+
+.notificationcontainerheader{
+    height: 30px;
+}
+
+.notificationcontainerheader>button{
+    background-color: transparent;
+    border: 0px;
+}
+
+.notificationcontainertitle{
+    position: absolute;
+    background-color: blue;
+    height: 50px;
+    top: 5%;
+    border-bottom: 1px solid gray;
+}
+
+.notificationcontainertitle>img{
+    width: 40px;
+    height: 40px;
+}
+
+.notificationcontainertitle>h4{
+    margin-top: 6px;
+    margin-left: 5px;
+    font-family: "Concert One", cursive;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.notificationcontainerbody{
+    position: absolute;
+    top: 18%;
+    height: 50px;
+}
+
+.messageconatiner{
+    background-color: white;
+    height: fit-content;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 8px;
+}
+
+.messagetitleleftside{
+    background-color: red;
+    margin-left: 5px;
+}
+
+.messagetitleleftside>img{
+    width: 25px;
+    height: 30px;
+}
+
+.messagetitleleftside>h4{
+    font-family: "Dongle", cursive;
+    font-size: 27px;
+    margin-left: 5px;
+}
+
+.messagetitlerightside{
+    margin-top: 5px;
+    background-color: blue;
+}
+
+.messagetitlerightside>h4{
+    font-family: "Dongle", cursive;
+    font-size: 20px;
+    margin-left: 5px;
+    color: gray;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.messagetitlerightside>button>i{
+    color: gray;
+}
+
+.messagetitlerightside>button{
+    height: 25px;
+    border: 0px;
+    background-color: red;
+    bottom: 25px;
+}
+
+.messagetittle{
+    margin-top: 5px;
+    height: 35px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+}
+
+.messagebody{
+    height: 40px;
+}
+
+.messagebody>h4{
+    font-family: "Dongle", cursive;
+    font-size: 25px;
+    margin-left: 8px;
+}
