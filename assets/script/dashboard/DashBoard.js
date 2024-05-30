@@ -144,9 +144,6 @@ function addEmployeeDetails(name, code, date, imageUrl, email) {
 
     // Append the HTML to the employee container
     employeeContainer.insertAdjacentHTML('beforeend', employeeHTML);
-    if(Today){
-      sendEmail(email,name);
-    }
 }
 
 function isDateToday(dateString) {
@@ -402,7 +399,7 @@ function sendEmail(to_email, name) {
         message: 'Happy Birthday '+name
     };
 
-    /*emailjs.send("service_d2ucwi6", "template_z41sjwr", templateParams)
+    emailjs.send("service_d2ucwi6", "template_z41sjwr", templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Email sent successfully!');
@@ -410,5 +407,5 @@ function sendEmail(to_email, name) {
             console.log('FAILED...', error);
             alert('Failed to send email. Please try again later.');
         });
-        */
+        
 }
