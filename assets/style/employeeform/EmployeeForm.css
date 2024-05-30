@@ -199,3 +199,14 @@
     font-family: "Dongle", sans-serif;
     font-size: 23px;
 }
+
+.error-message {
+  color: red;
+  display: none;
+  font-family: "Dongle", sans-serif;
+  font-size: 1.3em;
+  height: 0px;
+}
+.error-border {
+  border-color: red;
+}

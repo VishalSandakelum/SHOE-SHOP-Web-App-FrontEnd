@@ -390,7 +390,7 @@ function formatTime(date) {
   }
 
 (function() {
-    emailjs.init("");
+    emailjs.init("pdR1EgR-g0doBKePS");
 })();
 
 function sendEmail(to_email, name) {
@@ -402,12 +402,12 @@ function sendEmail(to_email, name) {
         message: 'Happy Birthday '+name
     };
 
-    emailjs.send("", "", templateParams)
+    /*emailjs.send("service_d2ucwi6", "template_z41sjwr", templateParams)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Email sent successfully!');
         }, function(error) {
             console.log('FAILED...', error);
             alert('Failed to send email. Please try again later.');
-        });
+        });*/
 }
