@@ -233,3 +233,10 @@ function clearAllSalesField(){
       $('.saletotalprice').val(alreadyTot+newTot);
     }
   }
+
+  $('.salepayementmethod').change(function() {
+    if ($(this).val() == 2) {
+      console.log('come');
+      $('.paymentdatacontainer').attr('style', 'display: block !important');
+    }
+});

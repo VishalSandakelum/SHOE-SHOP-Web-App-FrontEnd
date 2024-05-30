@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/style/saleform/SaleForm.css">
     <link rel="stylesheet" href="assets/style/userform/UserForm.css">
     <link rel="stylesheet" href="assets/style/profilechangedbox/ProfileChangedForm.css">
+    <link rel="stylesheet" href="assets/style/paymentform/PaymentForm.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1466,6 +1467,54 @@
                 </div>
             </div>
         </div>
+        <div class="col-8 paymentdatacontainer" style="display: none;">
+            <h2 class="paymenttitle">Settings</h2>
+            <h3 class="paymentsubtitle">Payment</h3>
+            <button class="paymentpagecclosebtn">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+
+            <div class="saved-cards">
+                <h4>Saved cards:</h4>
+                <div class="card">
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+                        <span>**** **** **** 3193</span>
+                    </div>
+                    <span class="remove">Remove card</span>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                        <span>**** **** **** 4296</span>
+                    </div>
+                    <span class="remove">Remove card</span>
+                </div>
+            </div>
+        
+            <h4>Add new card:</h4>
+            <form>
+                <div class="paymentform-group">
+                    <label class="paymentlabel" for="name">Cardholder's Name</label>
+                    <input class="paymentinput" type="text" id="name" placeholder="Anna Doe" required>
+                </div>
+                <div class="paymentform-group">
+                    <label class="paymentlabel" for="cardnumber">Card Number</label>
+                    <input class="paymentinput" type="text" id="cardnumber" placeholder="1234 5678 1234 5678" required>
+                </div>
+                <div class="paymentform-group paymentrow">
+                    <div class="paymentcol-half">
+                        <label class="paymentlabel" for="expiry">Expire</label>
+                        <input class="paymentinput" type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="paymentcol-half">
+                        <label class="paymentlabel" for="cvv">Cvv</label>
+                        <input class="paymentinput" type="text" id="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <button type="submit" class="addcardbtn">ADD CARD</button>
+            </form>
+        </div>
     </main>
     <script src="assets/script/jquery-3.7.1.min.js"></script>
     <script src="assets/script/dashboard/DashBoard.js"></script>
@@ -1475,6 +1524,7 @@
     <script src="assets/script/supplierForm/SupplierForm.js"></script>
     <script src="assets/script/userform/UserForm.js"></script>
     <script src="assets/script/saleform/SaleForm.js"></script>
+    <script src="assets/script/paymentform/PaymentForm.js"></script>
     <!--Ajax Script For Communicate With Server.-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="ajax/GlobalAttr.js"></script>

@@ -1,0 +1,100 @@
+.paymentdatacontainer {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto;
+    font-family: "Dongle", sans-serif;
+    font-size: 20px;
+    height: fit-content;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+.paymenttitle {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+.paymentsubtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: grey;
+    font-size: 30px;
+}
+.paymentform-group {
+    margin-bottom: 15px;
+    margin-right: 25px;
+}
+.paymentlabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.paymentinput, .select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.paymentinput:focus, .select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.paymentrow {
+    display: flex;
+    justify-content: space-between;
+}
+.paymentcol-half {
+    width: 48%;
+}
+.addcardbtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.addcardbtn:hover {
+    background-color: #218838;
+}
+.saved-cards {
+    margin-bottom: 20px;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.card img {
+    height: 30px;
+    margin-right: 10px;
+}
+.remove {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.paymentpagecclosebtn{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+    border: 0px;
+}

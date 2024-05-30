@@ -409,5 +409,6 @@ function sendEmail(to_email, name) {
         }, function(error) {
             console.log('FAILED...', error);
             alert('Failed to send email. Please try again later.');
-        });*/
+        });
+        */
 }
