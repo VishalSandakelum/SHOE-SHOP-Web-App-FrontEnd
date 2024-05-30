@@ -49,7 +49,7 @@ function findAllEmployeesOrderByDob(){
             console.log(resp[0]);
            for(var i in resp){
             console.log(isDateToday(resp[i].dob));
-            addEmployeeDetails(resp[i].employeeName,resp[i].employeeCode,formatDate(resp[i].dob),resp[i].employeeProfilePic);
+            addEmployeeDetails(resp[i].employeeName,resp[i].employeeCode,formatDate(resp[i].dob),resp[i].employeeProfilePic,resp[i].email);
            }
         },
         error:function(resp){

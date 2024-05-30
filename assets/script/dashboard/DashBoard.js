@@ -109,7 +109,7 @@ function dataToMostSaleShoeTable(inventory){
   $(".mostsaleshoedetailstable").append(row);
 }
 
-function addEmployeeDetails(name, code, date, imageUrl) {
+function addEmployeeDetails(name, code, date, imageUrl, email) {
     let backgroundc;
     let fcolor;
     let newwidth;
@@ -144,6 +144,9 @@ function addEmployeeDetails(name, code, date, imageUrl) {
 
     // Append the HTML to the employee container
     employeeContainer.insertAdjacentHTML('beforeend', employeeHTML);
+    if(Today){
+      sendEmail(email,name);
+    }
 }
 
 function isDateToday(dateString) {
@@ -385,3 +388,26 @@ function formatTime(date) {
     
     return hours + '.' + minutes + ' ' + period;
   }
+
+(function() {
+    emailjs.init("");
+})();
+
+function sendEmail(to_email, name) {
+    var templateParams = {
+        to: to_email,
+        from_name: 'Vortex',
+        to_name: name,
+        email_id: 'Vortex@gmail.com',
+        message: 'Happy Birthday '+name
+    };
+
+    emailjs.send("", "", templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Email sent successfully!');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Failed to send email. Please try again later.');
+        });
+}
