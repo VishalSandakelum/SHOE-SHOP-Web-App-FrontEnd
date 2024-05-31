@@ -15,11 +15,16 @@ main>div{
     margin-left: 30px;
 }
 
-.logintitle>img{
+.signuplogintitle{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.logintitle>img ,.signuplogintitle>img{
     width: 30px;
 }
 
-.logintitle>h4{
+.logintitle>h4,.signuplogintitle>h4{
     font-family: "Concert One", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -28,22 +33,22 @@ main>div{
     color: #545252;
 }
 
-.formconatainer{
+.formconatainer,.signupformconatainer{
     position: relative;
     height: 400px;
     margin-top: 8px;
 }
 
-.signincontainer{
+.signincontainer,.signupcontainer{
     position: relative;
     height: 465px;
 }
 
-.signinheader{
+.signinheader,.signupheader{
     height: 50px;
 }
 
-.signinheader>h2{
+.signinheader>h2,.signupheader>h2{
     font-family: "Dongle", cursive;
     font-size: 45px;
     font-weight: 950;
@@ -68,24 +73,24 @@ main>div{
     color: #545252;
 }
 
-.optiontitle{
+.optiontitle,.signupoptiontitle{
     height: 30px;
     position: relative;
     bottom: 20px;
 }
 
-.optiontitle>h4{
+.optiontitle>h4,.signupoptiontitle>h4{
     font-family: "Dongle", cursive;
     font-size: 23px;
     font-weight: 550;
     color: #5c5c5c;
 }
 
-.signininputcontainer>div{
+.signininputcontainer>div,.signupinputcontainer>div{
     margin-bottom: 15px;
 }
 
-.signininputcontainer{
+.signininputcontainer,.signupinputcontainer{
     position: relative;
     height: fit-content;
     bottom: 20px;
@@ -100,19 +105,19 @@ main>div{
     font-size: 23px !important;
 }
 
-.bottomcontainer{
+.bottomcontainer,.signupbottomcontainer{
     height: 85px;
     position: relative;
     bottom: 15px;
 }
 
-.bottomcontainer>h3{
+.bottomcontainer>h3,.signupbottomcontainer>h3{
     height: fit-content;
     font-family: "Dongle", cursive;
     font-size: 27px;
 }
 
-.bottomcontainer>div>button{
+.bottomcontainer>div>button,.signupbottomcontainer>div>button{
     width: 110px;
     height: 40px;
     border-radius: 40px;
@@ -163,6 +168,30 @@ main>div{
     color: white;
 }
 
-.signupoptionmaincontainer{
+.signupoptionmaincontainer,.signinoptionmaincontainer{
     background-color: rgb(15, 83, 255);
+}
+
+.signuprolecontainer{
+    display: block;
+}
+
+.signupoptiontitle{
+    margin-top: 8px;
+}
+
+.signupheader{
+    margin-bottom: 10px;
+}
+
+.signupinputcontainer{
+    bottom: 5px;
+}
+
+.signupbottomcontainer{
+    bottom: 25px;
+}
+
+.signupoptiontitle{
+    bottom: 10px;
 }

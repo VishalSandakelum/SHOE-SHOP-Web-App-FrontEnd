@@ -23,7 +23,7 @@
     <main class="col-12 d-flex align-items-center justify-content-center">
         <div class="col-7">
             <div class="col-12 d-flex">
-                <div class="d-flex flex-wrap col-8 justify-content-center signincontainer">
+                <div class="d-flex flex-wrap col-8 justify-content-center signincontainer" style="display: none !important;">
                     <div class="col-12 d-flex justify-content-left logintitle">
                         <img src="assets/img/LoginForm/logoicon.png" alt="vishal">
                         <h4>Vortex Login</h4>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 d-flex align-items-center flex-wrap signupoptionmaincontainer">
+                <div class="col-4 d-flex align-items-center flex-wrap signupoptionmaincontainer" style="display: none !important;">
                     <div class="col-12 signupoptioncontainer">
                         <div>
                             <h1>Didn't Have an Account</h1>
@@ -93,7 +93,80 @@
                             <h5>Simply Create your account by clicking the Signup Button</h5>
                         </div>
                         <div>
-                            <button>SIGN UP</button>
+                            <button class="tosignupform">SIGN UP</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-center flex-wrap signinoptionmaincontainer" style="display: none;">
+                    <div class="col-12 signupoptioncontainer">
+                        <div>
+                            <h1>Already Have an Account</h1>
+                        </div>
+                        <div>
+                            <h5>Simply Login to your account by clicking the Signin Button</h5>
+                        </div>
+                        <div>
+                            <button class="tosigninform">SIGN IN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap col-8 justify-content-center signupcontainer" style="display: none">
+                    <div class="col-12 d-flex justify-content-right signuplogintitle">
+                        <img src="assets/img/LoginForm/logoicon.png" alt="vishal">
+                        <h4>Vortex Login</h4>
+                    </div>
+                    <div class="col-10 d-flex flex-wrap justify-content-center signupformconatainer">
+                        <div class="col-12 d-flex justify-content-center signupheader">
+                            <h2>Sign up to Vortex</h2>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center socialbtncontainer">
+                            <button>
+                                <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-center signupoptiontitle">
+                            <h4>Or Use Your Email Account</h4>
+                        </div>
+                        <div class="col-8 signupinputcontainer">
+                            <div>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text" id="addon-wrapping">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control inputfont signupusernamefield" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text" id="addon-wrapping">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control inputfont signuppasswordfield" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+                                </div>
+                            </div>
+                            <div class="signuprolecontainer">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text" for="inputGroupSelect01">
+                                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    </label>
+                                    <select class="form-select signuproleselected" id="inputGroupSelect01">
+                                      <option selected>Select role</option>
+                                      <option value="1">USER</option>
+                                      <option value="2">ADMIN</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10 d-flex justify-content-center flex-wrap signupbottomcontainer">
+                            <div class="col-10 d-flex justify-content-center">
+                                <button class="align-self-end signupbtn">SIGN UP</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,6 +176,7 @@
 </body>
 <script src="assets/script/jquery-3.7.1.min.js"></script>
 <script src="ajax/login/Login.js"></script>
+<script src="assets/script/loginform/LoginForm.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="ajax/GlobalAttr.js"></script>
 </html>
