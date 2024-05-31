@@ -98,6 +98,7 @@ function clearAllSalesField(){
         size:$('.saleitemsize').val()
     }
     createTotal($('.saleitemqty').val(),$('.saleunitprice').val());
+    $('.salepoints').val(calculatePoints($('.saletotalprice').val()));
     clearSaleInventoryAddField();
     dataToSalesItemQueTable(addItem)
   });
@@ -241,9 +242,10 @@ function clearAllSalesField(){
     }
 });
 
-/*function createPoints(){
-  800>total = 1 point
-  if($('.saletotalprice').val()>=800){
-    let points = $('.saletotalprice').val()/800;
+function calculatePoints(number) {
+  if (number < 800) {
+      return 0;
+  } else {
+      return Math.floor(number / 800);
   }
-}*/
+}

@@ -100,7 +100,7 @@ main>div{
     display: none;
 }
 
-.inputfont{
+.inputfont,.signuproleselected{
     font-family: "Dongle", cursive;
     font-size: 23px !important;
 }
