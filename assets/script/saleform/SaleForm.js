@@ -240,3 +240,10 @@ function clearAllSalesField(){
       $('.paymentdatacontainer').attr('style', 'display: block !important');
     }
 });
+
+/*function createPoints(){
+  800>total = 1 point
+  if($('.saletotalprice').val()>=800){
+    let points = $('.saletotalprice').val()/800;
+  }
+}*/
